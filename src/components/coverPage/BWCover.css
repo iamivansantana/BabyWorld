@@ -1,0 +1,30 @@
+.bw-cover{   
+    background-image: url("./clouds.png");
+    background-size: 100% 100% ;
+    margin-top: 0;
+}
+.bw-cover-content{
+    display: block;
+    background-color: rgba(255, 255, 255, 0.363);
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    /* para desenfocar detras de */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    z-index: 50;
+}
+
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:850px){
+    /* @media screen and (max-width:500px){ */
+    .bw-cover{
+        background-size: auto 100%;
+    }
+   
+}
+/* -------------------Minimo  (pantallas grandes)------------------------------------------------------------------------------------------ */
+@media (min-width:1825px){
+    
+}

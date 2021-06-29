@@ -1,0 +1,60 @@
+.navBarContent{
+    position: fixed;
+    /* background-color: rgba(255, 255, 255, 0.363); */
+    width: 100%;
+    height: 4rem;
+    top: 0;
+    /* para desenfocar detras de */
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    /* para desenfocar dentro de */
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px);  */
+    z-index: 100;
+}
+.flex{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    background-color: transparent;
+    width: 20rem;
+    height: 100%;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+}
+.logo img{
+    width: 70%;
+    padding-left: 1rem;
+}
+.menu{
+    background-color: transparent;
+    width: auto;
+    height: 100%;
+    padding: 0 5rem 0 1rem;
+}
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:850px){
+    /* @media screen and (max-width:500px){ */
+    .logo img{
+        width: 100%;
+        padding-left: 0rem;
+    }
+
+}
+/* -------------------Minimo  (pantallas grandes)------------------------------------------------------------------------------------------ */
+@media (min-width:1825px){
+    
+    .flex{
+        display: flex;
+        margin-left: 50%;
+        transform: translate(-50%);
+        width: 1825px;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

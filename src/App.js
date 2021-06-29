@@ -1,8 +1,12 @@
+import React from 'react';
+import BabyWorldApp from './components/BabyWorldApp';
+
 
 function App() {
+
   return (
       <>
-      Started Baby World project
+      <BabyWorldApp />
       </>
   );
 }
