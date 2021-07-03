@@ -13,27 +13,54 @@ const BWCover = () => {
                                 <img  src="\assets\BW-Resources\world.svg" alt="mundo"/>
                             </div>
                             <div >
-                                <img className="cloud cloud1"  src="\assets\BW-Resources\cloud1.svg" alt="mundo"/>
-                                <img className="cloud cloud2"  src="\assets\BW-Resources\cloud2.svg" alt="mundo"/>
-                                <img className="cloud cloud3"  src="\assets\BW-Resources\cloud3.svg" alt="mundo"/>
-                                <img className="cloud cloud4"  src="\assets\BW-Resources\cloud4.svg" alt="mundo"/>
-                                <img className="cloud cloud5"  src="\assets\BW-Resources\cloud1.svg" alt="mundo"/>
+                                <img className="cloud cloud1"  src="\assets\BW-Resources\cloud1.svg" alt="cloud1"/>
+                                <img className="cloud cloud2"  src="\assets\BW-Resources\cloud2.svg" alt="cloud2"/>
+                                <img className="cloud cloud3"  src="\assets\BW-Resources\cloud3.svg" alt="cloud3"/>
+                                <img className="cloud cloud4"  src="\assets\BW-Resources\cloud4.svg" alt="cloud4"/>
+                                <img className="cloud cloud5"  src="\assets\BW-Resources\cloud1.svg" alt="cloud5"/>
                             </div>
                             <div className="bwFantasma">
-                                <img  src="\assets\BW-Resources\bwGhost.svg" alt="mundo"/>
+                                <img  src="\assets\BW-Resources\bwGhost.svg" alt="ghost"/>
                             </div>
                             <div className="bwBaby">
-                                <img  src="\assets\BW-Resources\bwBaby.svg" alt="mundo"/>
+                                <img  src="\assets\BW-Resources\bwBaby.svg" alt="baby"/>
                             </div>
                             <div className="bwWorld">
-                                <img  src="\assets\BW-Resources\bwWorld.svg" alt="mundo"/>
+                                <img  src="\assets\BW-Resources\bwWorld.svg" alt="worl"/>
                             </div>
                         </div>
                         <div className="bw-cover-dow">
                             <div className="bw-cover-content-grid">
-                                <div className="white"></div>
-                                <div className="arrow"></div>
-                                <div className="links"></div>
+                                <div className="white">
+                                </div>
+                                <div className="arrow">
+                                    <a href="#infoPage">
+                                        <img  src="\assets\BW-Resources\arrowDown.svg" alt="arrowDown"/>
+                                    </a>
+                                </div>
+                                <div className="links">
+                                    <a href='https://www.facebook.com/'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{textDecoration:'none'}}
+                                        className="linksMediaFacebook">
+                                        <img  src="\assets\BW-Resources\linkFacebook.svg" alt="toFacebook"/>
+                                    </a>
+                                    <a href='https://www.instagram.com/ivansanttana/'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{textDecoration:'none'}}
+                                        className="linksMedia">
+                                        <img  src="\assets\BW-Resources\linkInstagram.svg" alt="toInstagram"/>
+                                    </a>
+                                    <a href='https://twitter.com/iamivansantana'
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{textDecoration:'none'}}
+                                        className="linksMedia">
+                                        <img  src="\assets\BW-Resources\linkTwitter.svg" alt="toTwitter"/>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

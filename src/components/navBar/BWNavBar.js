@@ -54,7 +54,7 @@ const BWNavBar = () => {
                         <li className="item slash"><a className="bw-link" href="#"><img className="appsMenu" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" /></a></li>
                         {/* eslint-disable-next-line */}
                         <li className="item "><a id="login" className="bw-link" href="#">LOGIN</a></li>
-                        <li className=" slash ">/</li>
+                        <li className="slash" style={{pointerEvents:'none'}}>/</li>
                         {/* eslint-disable-next-line */}
                         <li className="item"><a id="register" className="bw-link" href="#">REGISTER</a></li>
                       
