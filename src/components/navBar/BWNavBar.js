@@ -8,15 +8,18 @@ const BWNavBar = () => {
     const navToggle = document.querySelector(".toggle");
     const navMenu = document.querySelector(".nav-menu");
     const navMenuBackground = document.querySelector(".nav-menu-backgroud");
-    
-    navToggle.addEventListener("click",()=>{
-      navMenu.classList.toggle("nav-menu-active");
-      navMenuBackground.classList.toggle("nav-menu-backgroud-active")
+
+    const items = document.querySelectorAll(".item");
+
+    function toggleNave() {
+       navMenu.classList.toggle("nav-menu-active");
+       navMenuBackground.classList.toggle("nav-menu-backgroud-active");
+   }
+    items.forEach(item=>{
+          item.addEventListener("click",toggleNave);
     });
-    navMenuBackground.addEventListener("click",()=>{
-      navMenu.classList.toggle("nav-menu-active");
-      navMenuBackground.classList.toggle("nav-menu-backgroud-active")
-    });
+    navToggle.addEventListener("click",toggleNave);
+    navMenuBackground.addEventListener("click",toggleNave);
 
 
     
@@ -42,18 +45,18 @@ const BWNavBar = () => {
                   <ul style={{margin:'0',padding:'0'}}>
                     <div className="nav-menu">
                         {/*  eslint-disable-next-line */}
-                        <li className="item"><a className="bw-link bw-link-active" href="#">HOME</a></li>
+                        <li className="item"><a id="home" className="bw-link bw-link-active" href="#coverPage">HOME</a></li>
                         {/*  eslint-disable-next-line */}
-                        <li className="item"><a className="bw-link" href="#">ABOUT</a></li>
+                        <li className="item"><a id="about" className="bw-link" href="#infoPage">ABOUT</a></li>
                         {/* eslint-disable-next-line */}
-                        <li className="item"><a className="bw-link" href="#">CONTACT</a></li>
+                        <li className="item"><a id="contact" className="bw-link" href="#contactPage">CONTACT</a></li>
                         {/* eslint-disable-next-line */}
                         <li className="item slash"><a className="bw-link" href="#"><img className="appsMenu" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" /></a></li>
                         {/* eslint-disable-next-line */}
-                        <li className="item "><a className="bw-link" href="#">LOGIN</a></li>
+                        <li className="item "><a id="login" className="bw-link" href="#">LOGIN</a></li>
                         <li className=" slash ">/</li>
                         {/* eslint-disable-next-line */}
-                        <li className="item"><a className="bw-link" href="#">REGISTER</a></li>
+                        <li className="item"><a id="register" className="bw-link" href="#">REGISTER</a></li>
                       
                     </div>
                   </ul>
