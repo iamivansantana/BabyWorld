@@ -45,18 +45,44 @@ const BWNavBar = () => {
                   <ul style={{margin:'0',padding:'0'}}>
                     <div className="nav-menu">
                         {/*  eslint-disable-next-line */}
-                        <li className="item"><a id="home" className="bw-link bw-link-active" href="#coverPage">HOME</a></li>
+                        <li className="item">
+                          <a id="home" className="bw-link bw-link-active" href="#coverPage">
+                            <span><img className="toggleIcon" src="\assets\BW-Resources\toggleHome.svg" alt="Home" /></span>HOME
+                          </a>
+                        </li>
                         {/*  eslint-disable-next-line */}
-                        <li className="item"><a id="about" className="bw-link" href="#infoPage">ABOUT</a></li>
+                        <li className="item">
+                          <a id="about" className="bw-link" href="#infoPage">
+                            <span><img className="toggleIcon" src="\assets\BW-Resources\toggleAbout.svg" alt="Info" /></span>ABOUT
+                          </a>
+                        </li>
+                        <li className="item">
+                        
+                          <a id="contact" className="bw-link" href="#contactPage">
+                            <span><img className="toggleIcon" src="\assets\BW-Resources\toggleContact.svg" alt="Contact" /></span>CONTACT
+                          </a>
+                        </li>
+                        <li className="item slash">
                         {/* eslint-disable-next-line */}
-                        <li className="item"><a id="contact" className="bw-link" href="#contactPage">CONTACT</a></li>
+                          <a className="bw-link bw-link-apps" href="#">
+                            <img className="appsMenu" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" />
+                          </a>
+                        </li>
+                        <li className="item ">
                         {/* eslint-disable-next-line */}
-                        <li className="item slash"><a className="bw-link" href="#"><img className="appsMenu" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" /></a></li>
-                        {/* eslint-disable-next-line */}
-                        <li className="item "><a id="login" className="bw-link" href="#">LOGIN</a></li>
+                          <a id="login" className="bw-link" href="#">
+                            <span><img className="toggleIcon" src="\assets\BW-Resources\toggleLogin.svg" alt="Login" /></span>LOGIN
+                          </a>
+                        </li>
                         <li className="slash" style={{pointerEvents:'none'}}>/</li>
+                        <li className="item">
                         {/* eslint-disable-next-line */}
-                        <li className="item"><a id="register" className="bw-link" href="#">REGISTER</a></li>
+                            <a id="register" className="bw-link" href="#">
+                          
+                              <span><img className="toggleIcon" src="\assets\BW-Resources\toggleRegister.svg" alt="Register" /></span>REGISTER
+                          
+                            </a>
+                        </li>
                       
                     </div>
                   </ul>

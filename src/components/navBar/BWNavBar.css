@@ -78,6 +78,11 @@
     background-color: rgba(0, 23, 85, 0.76);
     color: rgb(255, 255, 255);
 }
+.bw-link-apps:hover{
+    background-color: rgba(255, 255, 255, 0.644);
+    border-radius: 10px;
+    padding-top: 14px;
+}
 .appsMenu{
     width: 1.3rem;
 }
@@ -119,6 +124,9 @@
     z-index: 100;
 }
 
+.toggleIcon{
+    display: none;
+}
 
 /* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
 @media (max-width:850px){
@@ -186,17 +194,24 @@
         top: 0;   
     }
     .item{
+        width: 100%;
         line-height: 75px;
+        /* line-height: 35px; */
+        
     }
     .bw-link{
         text-decoration: none;
-        color: rgb(255, 255, 255);
+        color: #9ECDE2;
         font-weight: normal;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
     .bw-link:hover,
     .bw-link-active{
         background: none;
-        color: rgb(0, 23, 85);
+        color: #ffffff;
+        
     }
     .toggle{
         display: block;
@@ -212,6 +227,12 @@
     }
     .slash{
         display: none;
+    }
+    
+    .toggleIcon{
+        display: block;
+        width: 25px;
+        padding: 0 20px 0 15px;
     }
     
 }

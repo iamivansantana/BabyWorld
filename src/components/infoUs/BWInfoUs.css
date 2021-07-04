@@ -1,3 +1,60 @@
 .info-page{
-    background-color: yellow;
+    background-color: #f5f9ff;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    /* box-sizing: border-box; */
+}
+.infoPage-content{
+    position: relative;
+    width: 100%;
+    max-width: 1725px;
+    height: auto;
+    margin-left: 50%;
+    transform: translate(-50%);
+    padding-top: 60PX;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.infoPage-content h2{
+    color: rgb(0, 23, 85);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+}
+.bwApps-grid{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    grid-row: auto;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 255, 128, 0.219); */
+    /* padding: 10px; */
+}
+
+
+
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:850px){
+    .infoPage-content{
+        width: 95%;
+    }
+    .flexContent{
+        flex-direction: column;
+        
+    }
+    .bwApp-card{
+        width: 100%;
+    }  
+
+}
+
+
+/* -------------------Minimo  (pantallas grandes)------------------------------------------------------------------------------------------ */
+@media (min-width:1825px){
+    
 }
