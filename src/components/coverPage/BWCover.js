@@ -23,10 +23,10 @@ const BWCover = () => {
                                 <img  src="\assets\BW-Resources\bwGhost.svg" alt="ghost"/>
                             </div>
                             <div className="bwBaby">
-                                <img  src="\assets\BW-Resources\bwBaby.svg" alt="baby"/>
+                                <img className="bwBabySVG" src="\assets\BW-Resources\bwBaby2.svg" alt="baby"/>
                             </div>
                             <div className="bwWorld">
-                                <img  src="\assets\BW-Resources\bwWorld.svg" alt="worl"/>
+                                <img  src="\assets\BW-Resources\bwWorld2.svg" alt="worl"/>
                             </div>
                         </div>
                         <div className="bw-cover-dow">

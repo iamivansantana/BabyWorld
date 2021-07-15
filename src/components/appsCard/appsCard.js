@@ -7,11 +7,11 @@ const AppsCard = ({ img, desc, color }) => {
         <>
             <div className="flexContent">
                 <div className= {`bwApp-card  background${color}`}>
-                    <div>uno</div>
-                    <div>dos</div>
+                    <div className="img-card"><img src="\assets\BW-Resources\toggleHome.svg" alt="home"/></div>
+                    <div className="name-card">Temperatura</div>
                 </div>
                 <div>
-                    <p>{desc}</p>
+                    <p className="desc-card">{desc}</p>
                 </div>
             </div>
         </>

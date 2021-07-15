@@ -1,0 +1,32 @@
+.carruselContainer{
+    height: auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow: 0px 0px 10px 4px rgba(172, 172, 172, 0.315);
+}
+.slider{
+    display: grid;
+    grid-auto-flow: column;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-color: transparent #f5f9ff;
+    scrollbar-width: thin;
+}
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:500px){
+    .carruselContainer{
+        width: 300px;
+    }
+}
+
+
+/* -------------------Minimo  (pantallas grandes)------------------------------------------------------------------------------------------ */
+@media (min-width:1825px){
+    
+}
