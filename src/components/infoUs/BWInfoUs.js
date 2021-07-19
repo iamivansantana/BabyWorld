@@ -95,7 +95,7 @@ const BWInfoUs = () => {
                         <button className="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
                         {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
                         <Carrusel 
-                            slidesToShow = {11}
+                            slidesToShow = {4}
                             slidesToScroll = {1}
                             items = {'.slider-item'}
                             arrowPrev = {'.carrusel-btnPrev'}

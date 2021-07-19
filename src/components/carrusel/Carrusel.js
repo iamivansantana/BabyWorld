@@ -30,7 +30,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
         //Obtiene los estilos del item. (width y maxWidth)
         let itemStyles = document.querySelector(items);
         let elementStyle = window.getComputedStyle(itemStyles);
-        let widthItem = elementStyle.getPropertyValue('width');
+        let widthItem = elementStyle.getPropertyValue('width'); 
         
         //If else que evalua si los items que están dentro del componente son >= que el valor de items a mostrar (slidesToShowValue) enviado al componente.
         if (itemsChild.length>=slidesToShowValue) {   
@@ -68,6 +68,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
             let itemStyles = document.querySelector(items);
             let elementStyle = window.getComputedStyle(itemStyles);
             let widthItem = elementStyle.getPropertyValue('width');
+            
 
             if (itemsChild.length>=slidesToShowValue) {    
                 const widthCarrusel = parseFloat(widthItem) * slidesToShowValue+'px';
@@ -84,10 +85,18 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
         const Next = document.querySelector(arrowNext);
 
         Next.addEventListener("click",()=>{
+            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
+            let itemStyles = document.querySelector(items);
+            let elementStyle = window.getComputedStyle(itemStyles);
+            let widthItem = elementStyle.getPropertyValue('width'); 
             const widthItemNum = parseFloat(widthItem)*slidesToScroll;
             slider.scrollLeft +=widthItemNum;
         })
         Prev.addEventListener("click",()=>{
+            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
+            let itemStyles = document.querySelector(items);
+            let elementStyle = window.getComputedStyle(itemStyles);
+            let widthItem = elementStyle.getPropertyValue('width'); 
             const widthItemNum = parseFloat(widthItem)*slidesToScroll;
             slider.scrollLeft -=widthItemNum;
         })
