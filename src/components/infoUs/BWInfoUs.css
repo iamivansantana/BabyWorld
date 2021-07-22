@@ -81,7 +81,7 @@
 }
 
 .slider-item{
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(242, 247, 250);
     box-shadow: 15px 0px 80px -10px rgba(87, 87, 87, 0.555);
     width: 20.25vw;
     max-width: 300px;
@@ -89,12 +89,38 @@
     max-height: 300px;
     scroll-snap-align: end ;
     overflow: hidden;
+    box-sizing: border-box;
 }
 .slider-item:hover{
     cursor: pointer;
     transform: scale(0.98);
 }
+.slider-item-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.img-item{
+    width: 50%;
+    height: auto;
+}
+.tittle-item{
+    width: 90%;
+    /* background-color: blueviolet; */
+    font-size: 1.5rem;
+    color: rgb(0, 23, 85);
 
+}
+.description-item{
+    width: 90%;
+    margin-top: -30px;
+    color: rgb(0, 23, 85);
+    /* background-color: chartreuse; */
+}
 
 /* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
 @media (max-width:500px){
