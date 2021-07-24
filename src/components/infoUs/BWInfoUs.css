@@ -111,12 +111,15 @@
 .tittle-item{
     width: 90%;
     /* background-color: blueviolet; */
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
+    margin-top: -30px;
+    font-size: 1.5vw;
     color: rgb(0, 23, 85);
 
 }
 .description-item{
     width: 90%;
+    font-size: 1vw;
     margin-top: -30px;
     color: rgb(0, 23, 85);
     /* background-color: chartreuse; */
@@ -134,6 +137,13 @@
     .slider-item{
         width: 300px;
         height: 300px;
+    }
+    .tittle-item{
+        font-size: 1.5rem;
+    
+    }
+    .description-item{
+        font-size: 1rem;
     }
 }
 

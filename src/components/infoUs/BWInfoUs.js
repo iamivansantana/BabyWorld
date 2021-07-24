@@ -112,7 +112,7 @@ const BWInfoUs = () => {
                                 <div className="slider-item-container">
                                     <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
                                     <div className="tittle-item">Colores:</div>
-                                    <div className="description-item">Ayuda a aprender los colores a tu bebé</div>
+                                    <div className="description-item">Ayuda con la enseñanza de los colores a tu bebé</div>
                                 </div>
                             </div>
                             <div className="slider-item">
