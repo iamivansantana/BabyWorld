@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import AppsCard from '../appsCard/appsCard';
 import Carrusel from '../carrusel/Carrusel';
-import './BWInfoUs.css';
+import './BWInfo.css';
 
 
-const BWInfoUs = () => {
+const BWInfo = () => {
 
     useEffect(() => {
         const appsToggle = document.querySelector('.apps-toggle');
@@ -30,7 +30,12 @@ const BWInfoUs = () => {
         <>
             <div className="info-page" id="infoPage">
                 <div className="infoPage-content">
-                    <h2>BabyWorld Apps.</h2>  
+                    <h2>BabyWorld Apps.</h2>
+                    <p className="infoPAge-description">
+                    Baby World es una plataforma que te ayudará a lo largo del crecimiento / desarrollo de tú bebé,
+                    a través de las apps, herramientas, artículos y más funciones que hemos desarrollado para tí, para que
+                     seas un excelente papá / mamá para tu bebé
+                    </p>
                     <h4>Registro de Actividades.</h4>  
                       
                     <div className="bwApps-grid ">
@@ -145,4 +150,4 @@ const BWInfoUs = () => {
     )
 }
 
-export default BWInfoUs
+export default BWInfo

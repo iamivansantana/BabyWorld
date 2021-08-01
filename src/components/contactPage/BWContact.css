@@ -1,0 +1,104 @@
+.contact-page{
+    background-color: #f5f9ff;
+    /* background-color: #6090d6; */
+    width: 100%;
+    min-height: 700px;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.contactContainer{
+    /* background-color: cyan; */
+    position: relative;
+    width: 100%;
+    max-width: 1725px;
+    height: auto;
+
+    margin-left: 50%;
+    transform: translate(-50%);
+
+    padding-top: 10PX;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.grid-contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "picture text"
+                            "textDown textDown";
+    width: 100%;
+    height: 100%;
+}
+.contactPicture{
+    grid-area: picture;
+    /* background-color: blueviolet; */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactPicture img{
+    width: 70%;
+    border-radius: 18px;
+    box-shadow: 1px 0px 15px 5px rgba(9, 4, 29, 0.856);
+}
+.contactText{
+    grid-area: text;
+    /* background-color: chartreuse; */
+    min-height: 170px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.contactText p{ 
+    width: 80%;
+    color: rgb(25, 53, 85);
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 25px;
+    
+}
+.contactTextDown{
+    grid-area: textDown;
+    /* background-color: coral; */
+    margin-top: 20px;
+    /* height: 90px; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.contactTextDown p{
+    width: 90%;
+    
+    color: rgb(25, 53, 85);
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 30px;
+}
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:500px){
+    .grid-contact-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:    "picture"
+                                "text"
+                                "textDown";
+    }
+}
+
+
+/* -------------------Minimo  (pantallas grandes)------------------------------------------------------------------------------------------ */
+@media (min-width:1825px){
+    
+}

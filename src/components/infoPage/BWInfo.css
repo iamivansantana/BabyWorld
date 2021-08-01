@@ -28,6 +28,13 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 700;
 }
+.infoPage-content .infoPAge-description {
+    color: rgb(26, 31, 61);
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+    width: 90%;
+}
 .bwApps-grid{
     padding-top: 20px;
     display: grid;
@@ -144,6 +151,12 @@
     }
     .description-item{
         font-size: 1rem;
+    }
+    .infoPage-content .infoPAge-description {
+        color: rgb(125, 153, 204);
+        font-size: 1rem;
+        text-align: center;
+        width: 90%;
     }
 }
 

@@ -3,7 +3,7 @@ import './BabyWorldApp.css';
 import BWContact from './contactPage/BWContact';
 import BWCover from './coverPage/BWCover';
 import BWFooter from './footerPage/BWFooter';
-import BWInfoUs from './infoUs/BWInfoUs';
+import BWInfo from './infoPage/BWInfo';
 import BWNavBar from './navBar/BWNavBar';
 
 
@@ -13,7 +13,7 @@ const BabyWorldApp = () => {
             <div className="body-content">
                 <BWNavBar />  
                 <BWCover />
-                <BWInfoUs />
+                <BWInfo />
                 <BWContact />
                 <BWFooter />
             </div>
