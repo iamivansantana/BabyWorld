@@ -78,14 +78,70 @@
     flex-direction: column;
     
 }
-.contactTextDown p{
-    width: 90%;
-    
-    color: rgb(25, 53, 85);
-    font-size: 1.2rem;
-    text-align: center;
-    line-height: 30px;
+
+.sliderBabies{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
 }
+.sliderBabies::before,
+.sliderBabies::after{
+    background: linear-gradient(to right, rgba(255,255,255,1)0%,
+    rgba(255,255,255,0)100%);
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 50;
+}
+.sliderBabies::before{
+    left: 0;
+    top:0;
+}
+.sliderBabies::after{
+    right: 0;
+    top:0;
+    transform: rotateZ(180deg);
+}
+
+.sliderTrackBabies{
+    display: flex;
+    /* width: calc(250px * 9);  */
+    width: 100%;
+    animation: scroll 40s linear infinite;
+    /* background-color: skyblue; */
+}
+.sliderTrackBabies:hover{
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*9));
+    }
+}
+.sildeBabies{
+    height: 200px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    
+}
+.sildeBabies img {
+    width: 100%; 
+}
+.sildeBabies img:hover {
+    transform: scale(1.2);
+}
+
+
 /* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
 @media (max-width:500px){
     .grid-contact-container{
@@ -94,7 +150,24 @@
         grid-template-areas:    "picture"
                                 "text"
                                 "textDown";
+    }   
+    .contactText p{ 
+        width: 90%;
+        color: rgb(57, 121, 194);
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 25px;
+        font-weight: 300;
+        
     }
+    .sliderTrackBabies{
+        width: calc(250px * 9); 
+        /* width: 200px; */
+    }
+    .contactTextDown{
+        width: 100%;
+    }
+
 }
 
 

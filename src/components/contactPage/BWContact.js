@@ -16,10 +16,37 @@ const BWContact = () => {
                             <p>La finalidad de crear una plataforma en donde llevar un registro, aprender sobre cuidados, estar a la vanguardia de los mejores estudios que ayudarán mucho en el desarrollo de tu bebé, todo esto y más reunido y accesible de una manera facil es por lo que el equipo de BabyWorld hemos trabajado arduamente.</p>
                         </div>
                         <div className="contactTextDown">
-                            <p>Desde la noticia de la llegada de un nuevo integrante de la familia, las primeras etapas de crecimiento y desarrollo del bebé, una enorme responsabilidad nos acobija que como padres debemos sobrellevar.
-
-
-La finalidad de crear una plataforma en donde llevar un registro, aprender sobre cuidados, estar a la vanguardia de los mejores estudios que ayudarán mucho en el desarrollo de tu bebé, todo esto y más reunido y accesible de una manera facil es por lo que el equipo de BabyWorld hemos trabajado arduamente.</p>
+                            <div className="sliderBabies">
+                                <div className="sliderTrackBabies">
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby2.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby3.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby4.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby5.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby6.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby2.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby3.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby4.jpg" alt="babies" />
+                                    </div>
+                                    <div className="sildeBabies">
+                                        <img src="assets\BW-Resources\babies\baby5.jpg" alt="babies" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>  
 
