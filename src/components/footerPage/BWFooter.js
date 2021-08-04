@@ -1,10 +1,24 @@
-import React from 'react'
+import React from 'react';
+import './BWFooter.css';
 
 const BWFooter = () => {
     return (
         <>
-            <div className="vh-100 info-page" >
-                <h1>By Ivan Santana</h1>  
+            <div className="footer-page" >
+                <div className="footerContainer">
+                    <div className="footerLogo"><img src="assets\BW-Resources\bwGhost.svg" alt="BWLogo"/></div>
+                    <div className="footerGrid">
+                        <div className="footerAddres">
+                            <text>OFFICE</text>
+                            <text>Satelite S/N, 39000</text>
+                            <text>Guerrero, Mexico.</text>
+                        </div>
+                        <div className="footerEmail">E</div>
+                        <div className="footerSocial">S</div>
+                        <div className="footerTerms">T</div>
+
+                    </div>
+                </div>
             </div>    
         </>
     )
