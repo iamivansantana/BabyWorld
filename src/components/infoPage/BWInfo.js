@@ -115,21 +115,21 @@ const BWInfo = () => {
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\colores-btn.svg" alt="home"/></div>
                                     <div className="tittle-item">Colores:</div>
                                     <div className="description-item">Ayuda con la enseñanza de los colores a tu bebé</div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\vocales-btn.svg" alt="home"/></div>
                                     <div className="tittle-item">Vocales:</div>
                                     <div className="description-item">Enseña el sonido y forma de las vocales a tu bebé</div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\numeros-btn.svg" alt="home"/></div>
                                     <div className="tittle-item">Numeros:</div>
                                     <div className="description-item">Enseña los numeros a través del sonido y su forma.</div>
                                 </div>
