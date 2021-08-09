@@ -115,6 +115,12 @@
     width: 50%;
     height: auto;
 }
+.img-item img{
+    border-radius: 50%;
+    background-color: rgba(0, 23, 85, 0.89);
+    /* background-color: rgb(229, 230, 241); */
+    box-shadow: 0px 9px 40px 1px rgba(0, 23, 85, 0.356);
+}
 .tittle-item{
     width: 90%;
     /* background-color: blueviolet; */

@@ -60,7 +60,6 @@ const BWInfo = () => {
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Cuatro'}
                             />
-                        <span className="bwApp-hiden-on ">
                         <AppsCard 
                             img={'route'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
@@ -71,6 +70,7 @@ const BWInfo = () => {
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Seis'}
                             />
+                        <span className="bwApp-hiden-on ">
                         <AppsCard 
                             img={'route'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
@@ -108,37 +108,37 @@ const BWInfo = () => {
                         >
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
-                                    <div className="tittle-item">Sonidos:</div>
-                                    <div className="description-item">Enseña a tu bebé diferentes sonidos. </div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\animales-btn.svg" alt="Animales"/></div>
+                                    <div className="tittle-item">Animales:</div>
+                                    <div className="description-item">Enseña a tu bebé los nombres y sonidos de los animales. </div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\colores-btn.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\colores-btn.svg" alt="coloresBtn"/></div>
                                     <div className="tittle-item">Colores:</div>
                                     <div className="description-item">Ayuda con la enseñanza de los colores a tu bebé</div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\vocales-btn.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\vocales-btn.svg" alt="vocalesBtn"/></div>
                                     <div className="tittle-item">Vocales:</div>
                                     <div className="description-item">Enseña el sonido y forma de las vocales a tu bebé</div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\numeros-btn.svg" alt="home"/></div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\numeros-btn.svg" alt="numerosBtn"/></div>
                                     <div className="tittle-item">Numeros:</div>
                                     <div className="description-item">Enseña los numeros a través del sonido y su forma.</div>
                                 </div>
                             </div>
                             <div className="slider-item">
                                 <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\toggleAbout.svg" alt="home"/></div>
-                                    <div className="tittle-item">Animales:</div>
-                                    <div className="description-item">Description, here is where the description goes</div>
+                                    <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                    <div className="tittle-item">Sonidos:</div>
+                                    <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
                                 </div>
                             </div>
                         </Carrusel>
