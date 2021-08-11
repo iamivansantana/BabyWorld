@@ -34,39 +34,39 @@ const BWInfo = () => {
                     <p className="infoPAge-description">
                     Baby World es una plataforma que te ayudará a lo largo del crecimiento / desarrollo de tú bebé,
                     a través de las apps, herramientas, artículos y más funciones que hemos desarrollado para tí, para que
-                     seas un excelente papá / mamá para tu bebé
+                     seas un excelente papá / mamá para tu bebé.
                     </p>
                     <h4>Registro de Actividades.</h4>  
                       
                     <div className="bwApps-grid ">
 
                         <AppsCard 
-                            img={'route'}
+                            img={'medicina'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Uno'}
                         />
                         <AppsCard 
-                            img={'route'}
+                            img={'temperatura'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Dos'}
                         />
                         <AppsCard 
-                            img={'route'}
+                            img={'pañales'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Tres'}
                         />
                         <AppsCard 
-                            img={'route'}
+                            img={'termometro2'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Cuatro'}
                             />
                         <AppsCard 
-                            img={'route'}
+                            img={'vacunas'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Cinco'}
                             />
                         <AppsCard 
-                            img={'route'}
+                            img={'visita medica'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Seis'}
                             />
@@ -82,13 +82,13 @@ const BWInfo = () => {
                             color={'Ocho'}
                             />
                         <AppsCard 
-                            img={'route'}
+                            img={'resumen'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Nueve'}
                             />
                             
                         <AppsCard 
-                            img={'route'}
+                            img={'visita medica'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé'}
                             color={'Diez'}
                             />

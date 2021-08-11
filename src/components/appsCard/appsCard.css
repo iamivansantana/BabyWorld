@@ -28,11 +28,11 @@
     box-shadow: 0px 1px 10px 1px rgba(37, 84, 153, 0.671);
 }
 .img-card{
-    min-width: 2rem;
-    max-width: 3rem;
-    width: 30%;
     margin-right: 0;
     margin-left: 10px;
+}
+.img-card img{
+    height: 50px;
 }
 .name-card{
     color: white;
@@ -40,6 +40,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     font-weight: bold;
+    text-transform: capitalize;
     /* background: rgba(0, 0, 0, 0.295); */
     /* border-radius: 4PX; */
     padding: 10px;
@@ -107,9 +108,13 @@
 .img-card{
     margin-right: 0;
 }
+
+.img-card img{
+    height: 50px;
+}
 .name-card{
-    font-size: 15PX;
+    font-size: 14PX;
     padding: 0px;
-    padding-left: 5px;
+    padding-left: 0px;
 }
 }
