@@ -1,12 +1,15 @@
 import React from 'react';
 import BabyWorldApp from './components/BabyWorldApp';
+import ModalState from './context/modalContext/modalState';
 
 
 function App() {
 
   return (
       <>
-      <BabyWorldApp />
+      <ModalState >
+        <BabyWorldApp />
+      </ModalState>
       </>
   );
 }

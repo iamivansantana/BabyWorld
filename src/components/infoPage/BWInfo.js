@@ -42,54 +42,54 @@ const BWInfo = () => {
 
                         <AppsCard 
                             img={'medicina'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            desc={'Lleva un registro y recordatorio del medicamento de tu bebé.'}
                             color={'Uno'}
                         />
                         <AppsCard 
-                            img={'temperatura'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            img={'lactancia'}
+                            desc={'Lleva un registro del tiempo amamantando a tu bebé.'}
                             color={'Dos'}
                         />
                         <AppsCard 
                             img={'pañales'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            desc={'Lleva el registro de los cambios de pañales de tu bebé.'}
                             color={'Tres'}
                         />
                         <AppsCard 
-                            img={'termometro2'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            img={'temperatura'}
+                            desc={'Lleva el registro de la temperatura de tu bebé.'}
                             color={'Cuatro'}
                             />
                         <AppsCard 
                             img={'vacunas'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            desc={'Crea un calendario con recordatorio de las vacunas de tu bebé.'}
                             color={'Cinco'}
                             />
                         <AppsCard 
-                            img={'visita medica'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            img={'siestas'}
+                            desc={'Lleva un registro de las siestas que toma tu bebé'}
                             color={'Seis'}
                             />
                         <span className="bwApp-hiden-on ">
                         <AppsCard 
-                            img={'route'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            img={'llanto'}
+                            desc={'Lleva un registro del tiempo de llanto a tu bebé'}
                             color={'Siete'}
                             />
                         <AppsCard 
-                            img={'route'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            img={'notas'}
+                            desc={'Crea notas, recordatorios, etc. y visualizalos facilmente.'}
                             color={'Ocho'}
                             />
                         <AppsCard 
                             img={'resumen'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            desc={'Crea un resumen descargable con estadisticas de los datos registrados de tu bebé.'}
                             color={'Nueve'}
                             />
                             
                         <AppsCard 
                             img={'visita medica'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé'}
+                            desc={'Enlista las visitas medicas anteriores y futuras de tu bebé.'}
                             color={'Diez'}
                             />
                             </span>

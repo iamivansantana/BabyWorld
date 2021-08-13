@@ -8,7 +8,7 @@ const AppsCard = ({ img, desc, color }) => {
             <div className="flexContent">
                 <div className= {`bwApp-card  background${color}`}>
                     {/* <div className="img-card"><img src={`\assets\BW-Resources\btns\${color}-btn.svg`} alt="home"/></div> */}
-                    <div className="img-card"><img src={`/assets/BW-Resources/btns/${img}-btn.svg`} alt="home"/></div>
+                    <div className="img-card"><img src={`/assets/BW-Resources/btns/${img}-btn.svg`} alt={img}/></div>
                     <div className="name-card">{img}</div>
                 </div>
                 <div>

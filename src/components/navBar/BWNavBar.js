@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import modalContext from '../../context/modalContext/modalContext';
 import './BWNavBar.css';
 
 const BWNavBar = () => {
+
+   const {setIsOpen} = useContext(modalContext);
 
   useEffect(() => {
     
@@ -20,10 +23,14 @@ const BWNavBar = () => {
     });
     navToggle.addEventListener("click",toggleNave);
     navMenuBackground.addEventListener("click",toggleNave);
-
-
     
   });
+
+  //Funcion para abrir Ventana Modal.
+  const modaClick = ()=>{
+    //Abre Modal
+    setIsOpen(true);
+}
 
     return (
         <>
@@ -36,9 +43,9 @@ const BWNavBar = () => {
                 <div className="logo">
                   <img src="\assets\BW-Resources\tittle.svg" alt="BabyWorldLogo"/>
                 </div>
-                <button className="toggleApps">
+                <button className="toggleApps" onClick={modaClick}>
                   <img className="bars" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" />
-              </button>
+                </button>
 
                 <nav className="">
                   <div className="nav-menu-backgroud"/>
@@ -64,9 +71,9 @@ const BWNavBar = () => {
                         </li>
                         <li className="item slash">
                         {/* eslint-disable-next-line */}
-                          <a className="bw-link bw-link-apps" href="#">
+                          <button className="bw-link bw-link-apps" onClick={modaClick}>
                             <img className="appsMenu" src="\assets\BW-Resources\appsMenu.svg" alt="Menu" />
-                          </a>
+                          </button>
                         </li>
                         <li className="item ">
                         {/* eslint-disable-next-line */}
