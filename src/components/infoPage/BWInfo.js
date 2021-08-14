@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AppsCard from '../appsCard/appsCard';
 import Carrusel from '../carrusel/Carrusel';
+import Feed from '../feed/Feed';
 import './BWInfo.css';
 
 
@@ -143,7 +144,10 @@ const BWInfo = () => {
                             </div>
                         </Carrusel>
                         <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
+
+
                     </div>
+                        <Feed />
                 </div>
             </div>
         </>

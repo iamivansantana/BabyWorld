@@ -1,0 +1,68 @@
+.targetContainer{
+    /* background-color: aqua; */
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.targetType{
+    box-sizing: border-box;
+    width: 100%;
+    /* background-color: rgb(59, 165, 165); */
+    padding: 5px;
+    padding-left: 15px;
+}
+.targetBody{
+    width: 98%;
+    min-height: 150px;
+    border-radius: 15px;
+    background-color: #f2f7fa;
+    /* border: .5px solid rgb(181, 186, 189); */
+    /* box-shadow: 0px 1px 5px 2px rgba(152, 184, 201, 0.781); */
+    box-shadow: 0px 0px 10px 4px rgba(125, 177, 182, 0.315);
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: rgb(22, 43, 83);
+}
+.targetHead{
+    /* background-color: teal; */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    
+}
+.targetHeadName{
+    font-size: 1.4rem;
+    font-family: monospace;
+    font-weight: bold;
+    
+}
+.targetContent{
+    padding: 5px 20px 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    
+    /* background-color: turquoise; */
+    
+}
+.targetDown{
+    /* color: #d81861; */
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.targetLineDown{
+    margin-top: 30px;
+    margin-bottom: 15px;
+    position: relative;
+    width: 105%;
+    height: .5px;
+    background-color: rgb(159, 189, 189);
+}

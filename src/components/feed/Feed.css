@@ -1,0 +1,12 @@
+.feedContainer{
+    margin-top: 4rem;
+    width: 95%;
+    max-width: 600px;
+    /* background-color: royalblue; */
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
