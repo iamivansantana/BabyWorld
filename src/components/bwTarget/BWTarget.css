@@ -14,6 +14,12 @@
     /* background-color: rgb(59, 165, 165); */
     padding: 5px;
     padding-left: 15px;
+    opacity: .5;
+    color: #162b53;
+}
+.targetType img{
+    height: 14px;
+    
 }
 .targetBody{
     width: 98%;
@@ -27,7 +33,7 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    color: rgb(22, 43, 83);
+    color: #162b53;
 }
 .targetHead{
     /* background-color: teal; */
@@ -42,21 +48,75 @@
     font-size: 1.4rem;
     font-family: monospace;
     font-weight: bold;
-    
+    /* background-color: tomato; */
 }
+.targetHeadNameArticle{
+    font-size: 1.2rem;
+    width: 60%;
+}
+.targetheadButton{
+    display: flex;
+    /* background-color: tomato; */
+    justify-content: center;
+    align-items: center;
+}
+.targetheadButtonLove{
+    
+    font-size: 1.2rem;
+}
+
 .targetContent{
     padding: 5px 20px 20px 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
     
     /* background-color: turquoise; */
-    
+}
+.targetContentBy{
+    font-size: .8rem;
+}
+.targetArticleContent{
+    /* background-color: tomato; */
+    height: 375px;
+    overflow: hidden;
+}
+.targetArticleBtnVer{
+    /* background-color: tomato; */
+    width: 100%;
+    cursor: pointer;
+    padding: 15px;
+    font-weight: bolder;
+
 }
 .targetDown{
     /* color: #d81861; */
     display: flex;
     padding-top: 20px;
     justify-content: space-between;
+}
+.targetDownArticle{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: center;
+    align-items: center;
+    /* background-color: teal; */
+}
+.targetDownArticle img{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 2px rgba(125, 177, 182, 0.315);
+}
+.targetDownButton{
+    
+    display: flex;
+    /* background-color: tomato; */
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 20px;
 }
 .targetLineDown{
     margin-top: 30px;
@@ -65,4 +125,56 @@
     width: 105%;
     height: .5px;
     background-color: rgb(159, 189, 189);
+}
+
+
+
+.svg{
+    /* box-sizing: border-box; */
+    height: 18px;
+    margin-top: 5px;
+
+    fill:transparent;
+    fill-rule: evenodd;
+
+    
+    stroke-width : 1;
+    stroke-linejoin:round;
+
+    margin-left: 15px;
+}
+.svg:hover{
+    cursor: pointer;
+    
+}
+.targetSvgLove{
+    stroke:  #d81861;
+}
+.targetSvgLove:hover{
+    stroke:  transparent;
+    fill: #d81861;
+}
+.targetSvgSave{
+    stroke:  #151447;
+}
+.targetSvgSave:hover{
+    stroke:  transparent;
+    fill:  #151447;
+}
+.targetGeneroIcon{
+    width: 20px;
+    height: 20px;
+}
+
+/* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
+@media (max-width:500px){
+    .targetHeadNameArticle{
+        font-size: 1rem;
+        width: 75%;
+        /* background-color: tomato; */
+    }
+    .targetArticleContent{
+        /* background-color: tomato; */
+        height: 320px;
+    }
 }
