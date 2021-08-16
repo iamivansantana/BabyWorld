@@ -70,7 +70,7 @@ const ModalScreen = () => {
                     </div>
                      
                 </div>
-                <p className="appName">---- Crecimiento / Desarrollo.----</p>
+                <p className="appName">---- Aprendizaje.----</p>
                 <div className="modalApps-grid">
                     <div className="modalApps-container">
                         <div className="appBackground2">

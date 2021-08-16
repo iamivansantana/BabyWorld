@@ -96,7 +96,7 @@ const BWInfo = () => {
                             </span>
                     </div>
                     <h2 className="apps-toggle">Ver todo...</h2>
-                    <h4>Crecimiento/Desarrollo.</h4>  
+                    <h4>Aprendizaje.</h4>  
                     <div className="carrusel-container">
                         <button className="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
                         {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
