@@ -1,13 +1,41 @@
 import React from 'react';
+
 import './BWTarget.css';
 
-const BWTargetArticulos = () => {
+const BWTargetArticulos = ({id}) => {
+
+
+    
+    const toggleContent =  () => {
+
+        const targetArticleContent = document.getElementById(id);
+        const btnVer = document.querySelector(`#btnVer${id}`);
+        const jumbotronn = document.querySelector(`.jumbotronn${id}`);
+
+
+        const resp = targetArticleContent.classList.contains('articleContentAcive');
+
+        if (resp) {
+            targetArticleContent.classList.remove('articleContentAcive');
+            btnVer.innerHTML = "Ver menos...";
+            
+        } else {
+            targetArticleContent.classList.add('articleContentAcive');
+            btnVer.innerHTML = "... Ver todo.";
+            jumbotronn.scrollIntoView({behavior:'smooth'});
+
+
+        }
+        
+    }
+
+
     return (
         <>
            <div className="targetContainer">
-                <div className="targetType"><img src="\assets\BW-Resources\icons\ghostType-icon.svg" alt="gost-type"/> Artículos. </div>
+                <div className="targetType "><img src="\assets\BW-Resources\icons\ghostType-icon.svg" alt="gost-type"/> Artículos. </div>
                 <div className="targetBody">
-                    <div className="targetHead">
+                    <div className={`targetHead jumbotronn${id}`}>
                         <div className="targetHeadName targetHeadNameArticle">"¡MESA MALA!, no me le vuleva a pegar al niño".</div>
                         
                     </div>
@@ -18,7 +46,11 @@ const BWTargetArticulos = () => {
                             <div>Alas. La vida es como te la cuentas (Spotify).</div>
                         </div>
                         <div className="targetDownArticle">
-                            <div className="targetArticleContent">
+
+
+
+                            <div id={id} className="targetArticleContent articleContentAcive">
+                            {/* <iframe width="100%w" src="https://www.youtube.com/embed/UOJ8TiL6uoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                                 <div><img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/></div>
                                 <div>
                                     <div style={{textAlign:'justify'}}>
@@ -41,20 +73,22 @@ const BWTargetArticulos = () => {
                                     </div> 
                                 </div>
                             </div>
-                            <div className="targetArticleBtnVer">... Ver todo.</div>
+
+
+                            <div id={`btnVer${id}`} className="targetArticleBtnVer" onClick={toggleContent}>... Ver todo.</div>
 
                             <div className="targetDownButton" style={{color:'#d81861'}}>
                                 <div className="targetheadButtonLove">
                                     <svg className="svg targetSvgLove" xmlns="http://www.w3.org/2000/svg" viewBox="-.8 -1 23 19">
                                         <g id="Capa_2" data-name="Capa 2"><g id="iconos">
-                                        <path class="cls-1" d="M14,0A5.54,5.54,0,0,0,9.8,1.94,5.57,5.57,0,0,0,0,5.57c0,7,9.8,11.84,9.8,11.84S19.59,13,19.59,5.57A5.57,5.57,0,0,0,14,0Z"/></g></g>
+                                        <path className="cls-1" d="M14,0A5.54,5.54,0,0,0,9.8,1.94,5.57,5.57,0,0,0,0,5.57c0,7,9.8,11.84,9.8,11.84S19.59,13,19.59,5.57A5.57,5.57,0,0,0,14,0Z"/></g></g>
                                     </svg>
                                     <span>8521</span>
                                 </div>
                                 <div>
                                     <svg className="svg targetSvgSave" xmlns="http://www.w3.org/2000/svg" viewBox="-.8 -1 16 19">
                                         <g id="Capa_2" data-name="Capa 2"><g id="iconos">
-                                            <path class="cls-1" d="M7,10.64a.49.49,0,0,1,.69,0s6.28,6.81,6.74,6.74c.15,0,.25-.23.24-.61V1a1,1,0,0,0-1-1H1A1,1,0,0,0,0,1V16.77c0,.25,0,.53.26.64S7,10.64,7,10.64Z"/></g></g>
+                                            <path className="cls-1" d="M7,10.64a.49.49,0,0,1,.69,0s6.28,6.81,6.74,6.74c.15,0,.25-.23.24-.61V1a1,1,0,0,0-1-1H1A1,1,0,0,0,0,1V16.77c0,.25,0,.53.26.64S7,10.64,7,10.64Z"/></g></g>
                                     </svg>
                                 </div>
                             </div>

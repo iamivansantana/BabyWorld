@@ -145,7 +145,7 @@ const BWInfo = () => {
                         </Carrusel>
                         <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
 
-
+                    
                     </div>
                         <Feed />
                 </div>
