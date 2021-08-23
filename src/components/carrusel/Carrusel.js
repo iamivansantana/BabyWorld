@@ -3,10 +3,13 @@ import './Carrusel.css';
 
 //Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor
 
-const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, children }) => {
+const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos,children }) => {
+    
 
     //useEffect para ejecutar el codigo cada que carga el componente, se ejecuta almenos una vez y despues de crear los elementos html.
     useEffect(() => {
+
+        
 
         // Funcion regresa true si la pantalla cumple con el width indicado
         function isSmallScreen() {
@@ -46,7 +49,14 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
             //Asigna width al elemento carrusel
             carruselContainer.style.width = widthCarrusel;
         }
-        
+
+
+        //Funcion para calcular cantidad de Dots del carrusel
+        const sizeDots = () => {
+            const tamañoSlider = slider.scrollWidth;
+            console.log(tamañoSlider);
+        } 
+        sizeDots();
 
 
         //Evento que escucha cuando cambia el tamaño de la pantalla
@@ -83,7 +93,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
         //Seleccciona los botones next & prev.
         const Prev = document.querySelector(arrowPrev);
         const Next = document.querySelector(arrowNext);
-
+        
         Next.addEventListener("click",()=>{
             //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
             let itemStyles = document.querySelector(items);
@@ -91,6 +101,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
             let widthItem = elementStyle.getPropertyValue('width'); 
             const widthItemNum = parseFloat(widthItem)*slidesToScroll;
             slider.scrollLeft +=widthItemNum;
+
         })
         Prev.addEventListener("click",()=>{
             //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
@@ -99,7 +110,15 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext, child
             let widthItem = elementStyle.getPropertyValue('width'); 
             const widthItemNum = parseFloat(widthItem)*slidesToScroll;
             slider.scrollLeft -=widthItemNum;
+
+
         })
+        
+        const dots = document.querySelector(puntos);
+        const tamañoSlider = slider.scrollWidth;
+        // console.log(tamañoSlider);
+
+
 
     });
     

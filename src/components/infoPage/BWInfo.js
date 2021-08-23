@@ -97,56 +97,72 @@ const BWInfo = () => {
                     </div>
                     <h2 className="apps-toggle">Ver todo...</h2>
                     <h4>Aprendizaje.</h4>  
-                    <div className="carrusel-container">
-                        <button className="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
-                        {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
-                        <Carrusel 
-                            slidesToShow = {4}
-                            slidesToScroll = {1}
-                            items = {'.slider-item'}
-                            arrowPrev = {'.carrusel-btnPrev'}
-                            arrowNext = {'.carrusel-btnNext'}
-                        >
-                            <div className="slider-item">
-                                <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\animales-btn.svg" alt="Animales"/></div>
-                                    <div className="tittle-item">Animales:</div>
-                                    <div className="description-item">Enseña a tu bebé los nombres y sonidos de los animales. </div>
-                                </div>
+                    <div className="carruselFlexColum" >
+                        <div>
+                            <div className="carrusel-container">
+                            
+                                <button className="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
+                                {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
+                                <Carrusel 
+                                    slidesToShow = {4}
+                                    slidesToScroll = {1}
+                                    items = {'.slider-item'}
+                                    arrowPrev = {'.carrusel-btnPrev'}
+                                    arrowNext = {'.carrusel-btnNext'}
+                                    puntos = {'.carruselPuntos'}
+                                >
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\animales-btn.svg" alt="Animales"/></div>
+                                            <div className="tittle-item">Animales:</div>
+                                            <div className="description-item">Enseña a tu bebé los nombres y sonidos de los animales. </div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\colores-btn.svg" alt="coloresBtn"/></div>
+                                            <div className="tittle-item">Colores:</div>
+                                            <div className="description-item">Ayuda con la enseñanza de los colores a tu bebé</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\vocales-btn.svg" alt="vocalesBtn"/></div>
+                                            <div className="tittle-item">Vocales:</div>
+                                            <div className="description-item">Enseña el sonido y forma de las vocales a tu bebé</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\numeros-btn.svg" alt="numerosBtn"/></div>
+                                            <div className="tittle-item">Numeros:</div>
+                                            <div className="description-item">Enseña los numeros a través del sonido y su forma.</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                            <div className="tittle-item">Sonidos:</div>
+                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                            <div className="tittle-item">Sonidos:</div>
+                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
+                                        </div>
+                                    </div>
+                                </Carrusel>
+                                <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
+                        
                             </div>
-                            <div className="slider-item">
-                                <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\colores-btn.svg" alt="coloresBtn"/></div>
-                                    <div className="tittle-item">Colores:</div>
-                                    <div className="description-item">Ayuda con la enseñanza de los colores a tu bebé</div>
-                                </div>
-                            </div>
-                            <div className="slider-item">
-                                <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\vocales-btn.svg" alt="vocalesBtn"/></div>
-                                    <div className="tittle-item">Vocales:</div>
-                                    <div className="description-item">Enseña el sonido y forma de las vocales a tu bebé</div>
-                                </div>
-                            </div>
-                            <div className="slider-item">
-                                <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\numeros-btn.svg" alt="numerosBtn"/></div>
-                                    <div className="tittle-item">Numeros:</div>
-                                    <div className="description-item">Enseña los numeros a través del sonido y su forma.</div>
-                                </div>
-                            </div>
-                            <div className="slider-item">
-                                <div className="slider-item-container">
-                                    <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
-                                    <div className="tittle-item">Sonidos:</div>
-                                    <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
-                                </div>
-                            </div>
-                        </Carrusel>
-                        <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
-
-                    
+                        </div>
+                        <div className="carruselPuntos">
+                            ° ° ° °
+                        </div>
                     </div>
+                    
                         <Feed />
                 </div>
             </div>
