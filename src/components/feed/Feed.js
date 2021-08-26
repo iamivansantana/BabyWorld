@@ -2,7 +2,7 @@ import React from 'react';
 
 import BWTargetArticulos from '../bwTarget/BWTargetArticulos';
 import BWTargetNames from '../bwTarget/BWTargetNames';
-import BWTargetPrimerosAuxilios from '../bwTarget/BWTargetPrimerosAuxilios';
+// import BWTargetPrimerosAuxilios from '../bwTarget/BWTargetPrimerosAuxilios';
 import './Feed.css';
 
 
@@ -13,7 +13,7 @@ const Feed = () => {
                 <h2>Feed</h2>
                 <BWTargetNames />
                 <BWTargetArticulos id={'uno'} />
-                <BWTargetPrimerosAuxilios id={'uno'} />
+                {/* <BWTargetPrimerosAuxilios id={'uno'} /> */}
                 
             </div>
         </>

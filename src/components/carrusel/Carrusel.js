@@ -4,9 +4,12 @@ import './Carrusel.css';
 //Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor
 
 const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos,children }) => {
+
+
     
 
     //useEffect para ejecutar el codigo cada que carga el componente, se ejecuta almenos una vez y despues de crear los elementos html.
+    
     useEffect(() => {
 
         
@@ -53,14 +56,58 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
         //Funcion para calcular cantidad de Dots del carrusel
         const sizeDots = () => {
-            const tamañoSlider = slider.scrollWidth;
-            console.log(tamañoSlider);
+            
+            let widthCarrusell;
+            if (itemsChild.length < slidesToShowValue) widthCarrusell = parseFloat(widthItem) * itemsChild.length; 
+            else widthCarrusell = parseFloat(widthItem) * slidesToShowValue;
+
+            const scrollWidth = slider.scrollWidth;
+            const itemWidth = parseFloat(widthItem);
+
+            const resultDots = 1+((scrollWidth-widthCarrusell)/itemWidth);
+
+            // console.log( resultDots) ;
+
+            return Math.round( resultDots);
+
         } 
-        sizeDots();
+        // setDots(sizeDots());
+        console.log(sizeDots());
+
+        const puntosClass = document.querySelector(puntos);
+        
+
+        let foo = new Array(sizeDots());//create a 45 element array
+        
+        let result=[];
+        for(var i=0;i<foo.length;i++){
+             result = [...result,` <span id='spanDot${i}'>°</span>`];
+            }
+           const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
+            console.log(htmldots);
+            puntosClass.innerHTML = htmldots; 
+
+
+            // puntosClass.innerHTML = "<span id='spanDot0'>°</span>"; 
+        // const variable  = [{numero:1},{numero:2},{numero:3},{numero:4}];
+
+        // const resultVar = variable.map((item)=>(
+        //     `<h1>${item.numero}</h1>`
+        // ));
+        // console.log(resultVar);
+
+
+        // puntosClass.innerHTML = `<span> ${sizeDotsValue} </span>`;
+        // puntosClass.innerHTML = `<span> ° ° ° ° </span>`;
+
+
+
+
 
 
         //Evento que escucha cuando cambia el tamaño de la pantalla
         window.addEventListener("resize",()=>{
+
 
             //Verifica cada vez que cambia el tamaño si se cumple el max-width para visualizar el componente de una manera responsive.
             function isSmallScreen() {
@@ -88,6 +135,43 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
                 carruselContainer.style.width = widthCarrusel;
             }
 
+            //Funcion para calcular cantidad de Dots del carrusel
+        const sizeDots = () => {
+            
+            let widthCarrusell;
+            if (itemsChild.length < slidesToShowValue) widthCarrusell = parseFloat(widthItem) * itemsChild.length; 
+            else widthCarrusell = parseFloat(widthItem) * slidesToShowValue;
+
+            const scrollWidth = slider.scrollWidth;
+            const itemWidth = parseFloat(widthItem);
+
+            const resultDots = 1+((scrollWidth-widthCarrusell)/itemWidth);
+
+            // console.log( resultDots) ;
+
+            return Math.round( resultDots);
+
+        } 
+        
+        // console.log(sizeDots());
+        console.log(sizeDots());
+
+        const puntosClass = document.querySelector(puntos);
+        
+
+        let foo = new Array(sizeDots());//create a 45 element array
+        
+        let result=[]
+        for(var i=0;i<foo.length;i++){
+             result = [...result,` <span id='spanDot${i}'>°</span>`];
+            }
+           const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
+            console.log(htmldots);
+            puntosClass.innerHTML = htmldots; 
+
+        
+
+
         });
 
         //Seleccciona los botones next & prev.
@@ -114,8 +198,8 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
         })
         
-        const dots = document.querySelector(puntos);
-        const tamañoSlider = slider.scrollWidth;
+        // const dots = document.querySelector(puntos);
+        // const tamañoSlider = slider.scrollWidth;
         // console.log(tamañoSlider);
 
 

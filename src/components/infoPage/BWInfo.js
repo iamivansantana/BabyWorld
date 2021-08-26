@@ -146,6 +146,13 @@ const BWInfo = () => {
                                             <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
                                         </div>
                                     </div>
+                                    {/* <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                            <div className="tittle-item">Sonidos:</div>
+                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
+                                        </div>
+                                    </div>
                                     <div className="slider-item">
                                         <div className="slider-item-container">
                                             <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
@@ -153,13 +160,28 @@ const BWInfo = () => {
                                             <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
                                         </div>
                                     </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                            <div className="tittle-item">Sonidos:</div>
+                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
+                                        </div>
+                                    </div>
+                                    <div className="slider-item">
+                                        <div className="slider-item-container">
+                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
+                                            <div className="tittle-item">Sonidos:</div>
+                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
+                                        </div>
+                                    </div> */}
                                 </Carrusel>
                                 <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
                         
                             </div>
                         </div>
                         <div className="carruselPuntos">
-                            ° ° ° °
+                            {/* ° ° ° ° */}
+                           
                         </div>
                     </div>
                     
