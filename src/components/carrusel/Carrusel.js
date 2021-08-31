@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Carrusel.css';
 
-//Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor
+//Note para el funcionamiento correcto si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor
 
 const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos,children }) => {
 
 
-    
+    const [scrollL, setScrollL] = useState('spanDot0');
+    const [tamañoDots, settamañoDots] = useState(0);
 
-    //useEffect para ejecutar el codigo cada que carga el componente, se ejecuta almenos una vez y despues de crear los elementos html.
-    
+    //useEffect para ejecutar el codigo cada que carga el componente, se ejecuta almenos una vez y despues de crear los elementos html.    
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
-
-        
-
         // Funcion regresa true si la pantalla cumple con el width indicado
         function isSmallScreen() {
             return window.matchMedia('(max-width: 500px)').matches;
@@ -63,50 +61,61 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
             const scrollWidth = slider.scrollWidth;
             const itemWidth = parseFloat(widthItem);
-
             const resultDots = 1+((scrollWidth-widthCarrusell)/itemWidth);
 
-            // console.log( resultDots) ;
 
             return Math.round( resultDots);
-
         } 
-        // setDots(sizeDots());
-        console.log(sizeDots());
+
+        const tamañoDotsValue =sizeDots();
+        settamañoDots(tamañoDotsValue);
 
         const puntosClass = document.querySelector(puntos);
         
-
-        let foo = new Array(sizeDots());//create a 45 element array
-        
+        let dotsArray = new Array(sizeDots());//create elements of array
         let result=[];
-        for(var i=0;i<foo.length;i++){
-             result = [...result,` <span id='spanDot${i}'>°</span>`];
-            }
-           const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
-            console.log(htmldots);
-            puntosClass.innerHTML = htmldots; 
+        for(var i=0;i<dotsArray.length;i++){
+            result = [...result,` <span class='1234' id='spanDot${i}'>●</span>`];
+        }
+        const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
+        puntosClass.innerHTML = htmldots; 
 
 
-            // puntosClass.innerHTML = "<span id='spanDot0'>°</span>"; 
-        // const variable  = [{numero:1},{numero:2},{numero:3},{numero:4}];
+        //BOTONES NEXT & PREV.
+        //Seleccciona los botones next & prev.
+        const Prev = document.querySelector(arrowPrev);
+        const Next = document.querySelector(arrowNext);
 
-        // const resultVar = variable.map((item)=>(
-        //     `<h1>${item.numero}</h1>`
-        // ));
-        // console.log(resultVar);
+        Next.addEventListener("click",()=>{
+            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
+            let itemStyles = document.querySelector(items);
+            let elementStyle = window.getComputedStyle(itemStyles);
+            let widthItem = elementStyle.getPropertyValue('width'); 
+            const widthItemNum = parseFloat(widthItem)*slidesToScroll;
+            slider.scrollLeft +=widthItemNum;
+        });
 
+        Prev.addEventListener("click",()=>{
+            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
+            let itemStyles = document.querySelector(items);
+            let elementStyle = window.getComputedStyle(itemStyles);
+            let widthItem = elementStyle.getPropertyValue('width'); 
+            const widthItemNum = parseFloat(widthItem)*slidesToScroll;
+            slider.scrollLeft -=widthItemNum;
 
-        // puntosClass.innerHTML = `<span> ${sizeDotsValue} </span>`;
-        // puntosClass.innerHTML = `<span> ° ° ° ° </span>`;
+        });
 
+    });
 
+    useEffect(() => {
 
+        const screenResize = () => {
 
-
-
-        //Evento que escucha cuando cambia el tamaño de la pantalla
-        window.addEventListener("resize",()=>{
+            //Obtiene Todos los items dentro del Componente.
+            let itemsChild = document.querySelectorAll(items);
+            //obtiene los elementos con las clases .carruselContainer y  .slider.
+            let carruselContainer = document.querySelector('.carruselContainer');
+            let slider = document.querySelector('.slider');
 
 
             //Verifica cada vez que cambia el tamaño si se cumple el max-width para visualizar el componente de una manera responsive.
@@ -136,75 +145,84 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
             }
 
             //Funcion para calcular cantidad de Dots del carrusel
-        const sizeDots = () => {
+            const sizeDots = () => {
+                
+                let widthCarrusell;
+                if (itemsChild.length < slidesToShowValue) widthCarrusell = parseFloat(widthItem) * itemsChild.length; 
+                else widthCarrusell = parseFloat(widthItem) * slidesToShowValue;
+
+                const scrollWidth = slider.scrollWidth;
+                const itemWidth = parseFloat(widthItem);
+                const resultDots = 1+((scrollWidth-widthCarrusell)/itemWidth);
+                return Math.round( resultDots);
+            } 
+        
+            let sizeDotsValue = sizeDots();
             
-            let widthCarrusell;
-            if (itemsChild.length < slidesToShowValue) widthCarrusell = parseFloat(widthItem) * itemsChild.length; 
-            else widthCarrusell = parseFloat(widthItem) * slidesToShowValue;
+            settamañoDots(sizeDotsValue);
+        }
 
-            const scrollWidth = slider.scrollWidth;
-            const itemWidth = parseFloat(widthItem);
-
-            const resultDots = 1+((scrollWidth-widthCarrusell)/itemWidth);
-
-            // console.log( resultDots) ;
-
-            return Math.round( resultDots);
-
-        } 
-        
-        // console.log(sizeDots());
-        console.log(sizeDots());
-
-        const puntosClass = document.querySelector(puntos);
-        
-
-        let foo = new Array(sizeDots());//create a 45 element array
-        
-        let result=[]
-        for(var i=0;i<foo.length;i++){
-             result = [...result,` <span id='spanDot${i}'>°</span>`];
-            }
-           const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
-            console.log(htmldots);
-            puntosClass.innerHTML = htmldots; 
-
-        
-
-
-        });
-
-        //Seleccciona los botones next & prev.
-        const Prev = document.querySelector(arrowPrev);
-        const Next = document.querySelector(arrowNext);
-        
-        Next.addEventListener("click",()=>{
-            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
-            let itemStyles = document.querySelector(items);
-            let elementStyle = window.getComputedStyle(itemStyles);
-            let widthItem = elementStyle.getPropertyValue('width'); 
-            const widthItemNum = parseFloat(widthItem)*slidesToScroll;
-            slider.scrollLeft +=widthItemNum;
-
-        })
-        Prev.addEventListener("click",()=>{
-            //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
-            let itemStyles = document.querySelector(items);
-            let elementStyle = window.getComputedStyle(itemStyles);
-            let widthItem = elementStyle.getPropertyValue('width'); 
-            const widthItemNum = parseFloat(widthItem)*slidesToScroll;
-            slider.scrollLeft -=widthItemNum;
-
-
-        })
-        
-        // const dots = document.querySelector(puntos);
-        // const tamañoSlider = slider.scrollWidth;
-        // console.log(tamañoSlider);
-
-
+        //Evento que escucha cuando cambia el tamaño de la pantalla
+        window.addEventListener("resize",()=>{screenResize()});
 
     });
+
+    useEffect(() => {
+            const puntosClass = document.querySelector(puntos);
+        
+            if(tamañoDots === 0) return;
+
+            let dotsArray = new Array(tamañoDots);//create elements array
+            // console.log(dotsArray); //se cre cada vez un array de n elementos pero vacio !!Arreglar....
+        
+            let result=[]
+            for(var i=0;i<dotsArray.length;i++){
+            // const numi = i+1;
+             result = [...result,` <span class='1234' id='spanDot${i}'>●</span>`];
+
+            }
+            // console.log(result);
+           const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
+            // console.log(htmldots);
+            puntosClass.innerHTML = htmldots; 
+    }, [tamañoDots,puntos])
+
+
+
+    useEffect(() => {
+        let slider = document.querySelector('.slider');
+        
+        const dotsActive = ()=>{
+
+            let itemStyles = document.querySelector(items);
+            let elementStyle = window.getComputedStyle(itemStyles);
+            let widthItem = elementStyle.getPropertyValue('width'); 
+
+            const scrL = slider.scrollLeft;
+            const scrnum = Math.round(scrL/parseFloat(widthItem));
+            setScrollL('spanDot'+ scrnum);
+            // console.log(scrnum);
+        }
+
+        //Evento que escucha el scrool del Slider.
+        slider.addEventListener("scroll",()=>{dotsActive()});
+
+    });
+
+    useEffect(() => {
+
+                const spans = document.getElementsByClassName('1234');
+                var arr = Array.prototype.slice.call( spans );
+
+                arr.forEach(element => {
+
+                    const resp = element.classList.contains('dotActive');
+                    if (!resp) element.classList.remove('dotActive');
+                    if(element.id === scrollL) element.classList.add('dotActive');
+                    
+                });
+
+    }, [scrollL,tamañoDots]);
     
 
     return (

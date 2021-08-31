@@ -179,10 +179,10 @@ const BWInfo = () => {
                         
                             </div>
                         </div>
-                        <div className="carruselPuntos">
+                        <div className="carruselPuntos"/>
                             {/* ° ° ° ° */}
                            
-                        </div>
+                        {/* </div> */}
                     </div>
                     
                         <Feed />

@@ -20,6 +20,11 @@
 .slider::-webkit-scrollbar{
     display: none;
 }
+.dotActive{
+    color: #436575;
+    -webkit-text-stroke: 1px #436575;
+    /* filter: drop-shadow(0px 0px 5px rgb(15, 207, 255)); */
+}
 
 /* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
 @media (max-width:500px){

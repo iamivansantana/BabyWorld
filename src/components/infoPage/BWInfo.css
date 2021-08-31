@@ -82,10 +82,12 @@
     justify-content: center;
     align-items: center;
     padding-top: 20px;
-    color: rgb(67, 101, 117);
+    /* color: #436575; */
+    color: transparent;
+    -webkit-text-stroke: 1px #436575;
     
     /* background-color: aqua; */
-    font-size: 3rem;
+    font-size: 1.2rem;
     height: 50px;
 }
 .carrusel-btnPrev{
@@ -116,7 +118,8 @@
 }
 .slider-item:hover{
     cursor: pointer;
-    transform: scale(0.98);
+    background-color: rgb(234, 246, 255);
+    /* transform: scale(0.98); */
 }
 .slider-item-container{
     width: 100%;
@@ -186,6 +189,11 @@
     .carrusel-btnNext{
         width: 1.5rem;
     }
+    
+    .carruselPuntos{
+        font-size: .8rem;
+    }
+    
 }
 
 

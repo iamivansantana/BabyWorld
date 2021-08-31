@@ -23,8 +23,6 @@ const BWTargetArticulos = ({id}) => {
             targetArticleContent.classList.add('articleContentAcive');
             btnVer.innerHTML = "... Ver todo.";
             jumbotronn.scrollIntoView({behavior:'smooth'});
-
-
         }
         
     }

@@ -28,6 +28,10 @@ const BWCover = () => {
                             <div className="bwWorld">
                                 <img  src="\assets\BW-Resources\bwWorld2.svg" alt="worl"/>
                             </div>
+                            <div className="bwStores">
+                                <img src="assets\BW-Resources\icons\appStoreInsignia.svg" alt="appstore"/>
+                                <img src="assets\BW-Resources\icons\googleplayInsignia.png" alt="playstore"/>
+                            </div>
                         </div>
                         <div className="bw-cover-dow">
                             <div className="bw-cover-content-grid">
