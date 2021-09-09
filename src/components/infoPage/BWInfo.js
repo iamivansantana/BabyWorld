@@ -27,6 +27,8 @@ const BWInfo = () => {
         
     })
 
+
+
     return (
         <>
             <div className="info-page" id="infoPage">
@@ -39,7 +41,7 @@ const BWInfo = () => {
                     </p>
                     <h4>Registro de Actividades.</h4>  
                       
-                    <div className="bwApps-grid ">
+                    <div className="bwApps-grid " >
 
                         <AppsCard 
                             img={'medicina'}
@@ -96,20 +98,23 @@ const BWInfo = () => {
                             </span>
                     </div>
                     <h2 className="apps-toggle">Ver todo...</h2>
+
+
                     <h4>Aprendizaje.</h4>  
                     <div className="carruselFlexColum" >
-                        <div>
+                        <div className="display-Flex">
+                            <button className="carrusel-btnPrev" id="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
                             <div className="carrusel-container">
                             
-                                <button className="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
                                 {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
                                 <Carrusel 
+                                    id={123}
                                     slidesToShow = {4}
                                     slidesToScroll = {1}
                                     items = {'.slider-item'}
-                                    arrowPrev = {'.carrusel-btnPrev'}
-                                    arrowNext = {'.carrusel-btnNext'}
-                                    puntos = {'.carruselPuntos'}
+                                    arrowPrev = {'carrusel-btnPrev'}
+                                    arrowNext = {'carrusel-btnNext'}
+                                    puntos = {'carruselPuntos'}
                                 >
                                     <div className="slider-item">
                                         <div className="slider-item-container">
@@ -146,44 +151,16 @@ const BWInfo = () => {
                                             <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
                                         </div>
                                     </div>
-                                    {/* <div className="slider-item">
-                                        <div className="slider-item-container">
-                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
-                                            <div className="tittle-item">Sonidos:</div>
-                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item">
-                                        <div className="slider-item-container">
-                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
-                                            <div className="tittle-item">Sonidos:</div>
-                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item">
-                                        <div className="slider-item-container">
-                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
-                                            <div className="tittle-item">Sonidos:</div>
-                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item">
-                                        <div className="slider-item-container">
-                                            <div className="img-item"><img src="\assets\BW-Resources\btns\sonidos-btn.svg" alt="sonidosBtn"/></div>
-                                            <div className="tittle-item">Sonidos:</div>
-                                            <div className="description-item">Enseña a tu bebé diferentes sonidos del mundo real.</div>
-                                        </div>
-                                    </div> */}
                                 </Carrusel>
-                                <button className="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
                         
                             </div>
+                                <button className="carrusel-btnNext" id="carrusel-btnNext"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
                         </div>
-                        <div className="carruselPuntos"/>
-                            {/* ° ° ° ° */}
-                           
-                        {/* </div> */}
+                        <div className="carruselPuntos" id="carruselPuntos"/>
                     </div>
+
+
+                   
                     
                         <Feed />
                 </div>

@@ -12,8 +12,9 @@ const Feed = () => {
             <div className="feedContainer">
                 <h2>Feed</h2>
                 <BWTargetNames />
-                <BWTargetArticulos id={'uno'} />
-                {/* <BWTargetPrimerosAuxilios id={'uno'} /> */}
+                <BWTargetArticulos id={11} />
+                {/* <BWTargetArticulos id={22} /> */}
+                {/* <BWTargetPrimerosAuxilios id={55} /> */}
                 
             </div>
         </>

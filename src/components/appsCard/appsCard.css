@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 500px;
     height: 100%;
     box-sizing: border-box;
     padding-left: 40px;
@@ -10,49 +11,77 @@
     
 }
 .bwApp-card{
-    
     width: 50%;
-    max-width: 300px;
-    min-width: 200px;
-    height: 120px;
+    max-width: 400px;
+    height: 400px;
     border-radius: 35px;
-    box-shadow: 0px 1px 20px 2px rgba(37, 84, 153, 0.671);
+    border: 1.5px solid #000000;
+    box-shadow: 0px 1px 7px 1px rgba(37, 84, 153, 0.671);
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    
 }
-.bwApp-card:hover{
-    cursor: pointer;
-    transform: scale(.97);
-    box-shadow: 0px 1px 10px 1px rgba(37, 84, 153, 0.671);
-}
+
 .img-card{
-    margin-right: 0;
-    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .img-card img{
-    height: 50px;
+    padding: 15px;
+    /* width: 60%; */
+    height: 200px;
     
 }
+.bwApp-card-body{   
+    width: 50%;
+    max-width: 700px;
+    height: 400px;
+    /* box-shadow: 0px 1px 5px 2px rgba(37, 84, 153, 0.671); */
+    overflow: hidden;
+    margin-left: 5%;
+    text-align: center;
+    color: #02396b;
+}
 .name-card{
-    color: white;
-    -webkit-text-stroke: .4px black;
+    /* color: black; */
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: capitalize;
     /* background: rgba(0, 0, 0, 0.295); */
     /* border-radius: 4PX; */
-    padding: 10px;
+    padding: 5px;
+    width: 100%;
     
 }
 .desc-card{
-    width: 200px;
-    padding-left: 20px;
-    /* background-color: oldlace; */
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: left;
 }
+.btn-card{
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 55px;
+    padding: 5px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid #02396b;
+    color: #02396b;
+    background-color: transparent;
+    transition: .3s ease-in-out;
+}
+.btn-card:hover{
+    /* transition: 2s  ease-in-out; */
+    cursor: pointer;
+    color: white;
+    background-color: #02396b;
+}
+
 .backgroundUno{
     background: linear-gradient(90deg, rgb(187, 237, 241) 0%, rgba(118,254,255,1) 43%, rgba(7,101,133,1) 100%);
 }
@@ -95,33 +124,29 @@
     padding-left: 5px;
 }
 .bwApp-card{
-    /* background-color: springgreen; */
-    width: 95%;
-    height: 80px;
-    border-radius: 20px;
-    max-width: 95%;
-    min-width: 90%;
-}  
-.desc-card{
-    max-width: 160px;
-    width: 90%;
-    height: 80px;
-    
-    padding-left: 0px;
-    /* background-color: springgreen; */
-    text-align: right;
-}
-.img-card{
-    margin-right: 0;
-}
+    min-width: 200px;
+    width: 80%;
+    height: 260px;
 
+}  
 .img-card img{
-    height: 50px;
-    padding-right: 5px;
+    padding: 15px;
+    height: 180px;
+}
+.bwApp-card-body{   
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin-left: 0%;
 }
 .name-card{
-    font-size: 14PX;
-    padding: 0px;
-    padding-left: 0px;
+    margin-top: 4%;
+    padding: 5px;
+    width: 100%;
+}
+.desc-card{
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
 }
 }

@@ -38,7 +38,7 @@
 .bwApps-grid{
     padding-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 30px;
     grid-row: auto;
     width: 100%;
@@ -66,6 +66,9 @@
     display: flex;
     flex-direction: column;
 }
+.display-Flex{
+    display: flex;
+}
 .carrusel-container{
     display: flex;
     justify-content: center;
@@ -75,6 +78,7 @@
     height: auto;
     /* background-color: aqua; */
     box-sizing: border-box;
+    box-shadow: 0px 0px 10px 4px rgba(125, 177, 182, 0.315);
 }
 .carruselPuntos{
     box-sizing: border-box;
@@ -116,6 +120,7 @@
     overflow: hidden;
     box-sizing: border-box;
 }
+
 .slider-item:hover{
     cursor: pointer;
     background-color: rgb(234, 246, 255);
@@ -170,6 +175,7 @@
         width: 300px;
         height: 300px;
     }
+    
     .tittle-item{
         font-size: 1.5rem;
     

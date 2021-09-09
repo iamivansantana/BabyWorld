@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 import './Carrusel.css';
 
 //Note para el funcionamiento correcto si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor
 
-const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos,children }) => {
+const Carrusel = ({ id,slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos,children }) => {
 
 
     const [scrollL, setScrollL] = useState('spanDot0');
@@ -26,8 +27,8 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
 
         //obtiene los elementos con las clases .carruselContainer y  .slider.
-        let carruselContainer = document.querySelector('.carruselContainer');
-        let slider = document.querySelector('.slider');
+        let carruselContainer = document.querySelector(`#carruselContainer${id}`);
+        let slider = document.querySelector(`#slider${id}`);
         //Obtiene Todos los items dentro del Componente.
         let itemsChild = document.querySelectorAll(items);
 
@@ -70,12 +71,12 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
         const tamañoDotsValue =sizeDots();
         settamañoDots(tamañoDotsValue);
 
-        const puntosClass = document.querySelector(puntos);
+        const puntosClass = document.querySelector(`#${puntos}`);
         
         let dotsArray = new Array(sizeDots());//create elements of array
         let result=[];
         for(var i=0;i<dotsArray.length;i++){
-            result = [...result,` <span class='1234' id='spanDot${i}'>●</span>`];
+            result = [...result,` <span class='1234${id}' id='spanDot${i}'>●</span>`];
         }
         const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
         puntosClass.innerHTML = htmldots; 
@@ -83,8 +84,10 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
         //BOTONES NEXT & PREV.
         //Seleccciona los botones next & prev.
-        const Prev = document.querySelector(arrowPrev);
-        const Next = document.querySelector(arrowNext);
+        const Prev = document.querySelector(`#${arrowPrev}`);
+        const Next = document.querySelector(`#${arrowNext}`);
+
+        if(!Prev || !Next) return;
 
         Next.addEventListener("click",()=>{
             //Obtiene de nuevo los estilos del item. (width) por si hubo algun cambio.
@@ -114,8 +117,8 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
             //Obtiene Todos los items dentro del Componente.
             let itemsChild = document.querySelectorAll(items);
             //obtiene los elementos con las clases .carruselContainer y  .slider.
-            let carruselContainer = document.querySelector('.carruselContainer');
-            let slider = document.querySelector('.slider');
+            let carruselContainer = document.querySelector(`#carruselContainer${id}`);
+            let slider = document.querySelector(`#slider${id}`);
 
 
             //Verifica cada vez que cambia el tamaño si se cumple el max-width para visualizar el componente de una manera responsive.
@@ -168,7 +171,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
     });
 
     useEffect(() => {
-            const puntosClass = document.querySelector(puntos);
+            const puntosClass = document.querySelector(`#${puntos}`);
         
             if(tamañoDots === 0) return;
 
@@ -178,19 +181,19 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
             let result=[]
             for(var i=0;i<dotsArray.length;i++){
             // const numi = i+1;
-             result = [...result,` <span class='1234' id='spanDot${i}'>●</span>`];
+             result = [...result,` <span class='1234${id}' id='spanDot${i}'>●</span>`];
 
             }
             // console.log(result);
            const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
             // console.log(htmldots);
             puntosClass.innerHTML = htmldots; 
-    }, [tamañoDots,puntos])
+    }, [tamañoDots,puntos,id])
 
 
 
     useEffect(() => {
-        let slider = document.querySelector('.slider');
+        let slider = document.querySelector(`#slider${id}`);
         
         const dotsActive = ()=>{
 
@@ -211,7 +214,7 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
 
     useEffect(() => {
 
-                const spans = document.getElementsByClassName('1234');
+                const spans = document.getElementsByClassName(`1234${id}`);
                 var arr = Array.prototype.slice.call( spans );
 
                 arr.forEach(element => {
@@ -222,13 +225,13 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
                     
                 });
 
-    }, [scrollL,tamañoDots]);
+    }, [scrollL,tamañoDots,id]);
     
 
     return (
         <>
-            <div className="carruselContainer">
-                <div className="slider">
+            <div className="carruselContainer" id={`carruselContainer${id}`}>
+                <div className="slider" id={`slider${id}`}>
                     {children} 
                 </div>
             </div>
@@ -236,4 +239,19 @@ const Carrusel = ({ slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,puntos
     )
 }
 
-export default Carrusel
+export default Carrusel;
+
+
+
+
+Carrusel.propTypes = {
+    id: PropTypes.any.isRequired,
+    slidesToShow: PropTypes.number.isRequired,
+    slidesToScroll: PropTypes.number.isRequired,
+    items:PropTypes.string.isRequired,
+    arrowPrev: PropTypes.string,
+    arrowNext: PropTypes.string,
+    puntos: PropTypes.string.isRequired,
+    children: PropTypes.array.isRequired
+}
+
