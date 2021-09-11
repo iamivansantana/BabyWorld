@@ -19,7 +19,6 @@
 }
 .targetType img{
     height: 14px;
-    
 }
 .targetBody{
     width: 98%;
@@ -44,16 +43,22 @@
     padding-right: 10px;
     
 }
+
+/* Titulo para tarjetas en general */
 .targetHeadName{
     font-size: 1.4rem;
     font-family: monospace;
     font-weight: bold;
     /* background-color: tomato; */
 }
+
+/* Titulo para tarjetas tipo Articulo */
 .targetHeadNameArticle{
     font-size: 1.2rem;
     width: 60%;
 }
+
+/* Botones de reaccion en Top */
 .targetheadButton{
     display: flex;
     /* background-color: tomato; */
@@ -61,27 +66,30 @@
     align-items: center;
 }
 .targetheadButtonLove{
-    
     font-size: 1.2rem;
 }
 
+/* Contenedor de contenido */
 .targetContent{
     padding: 5px 20px 20px 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: justify;
-    
-    /* background-color: turquoise; */
 }
+
+/* Referencias */
 .targetContentBy{
     font-size: .8rem;
 }
+
+/* Contenedor de info tipo Articulo */
 .targetArticleContent{
-    /* background-color: tomato; */
     overflow: hidden;
 }
 .articleContentAcive{
     height: 402px;
 }
+
+/* Boton ver mas */
 .targetArticleBtnVer{
     /* background-color: tomato; */
     width: 100%;
@@ -104,14 +112,6 @@
     align-items: center;
     /* background-color: teal; */
 }
-.targetDownArticle img{
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 300px;
-    border-radius: 10px;
-    box-shadow: 0px 1px 10px 2px rgba(125, 177, 182, 0.315);
-}
 .targetDownButton{
     
     display: flex;
@@ -130,7 +130,7 @@
 }
 
 
-
+/* Estilo de iconos SVG */
 .svg{
     /* box-sizing: border-box; */
     height: 18px;
@@ -147,7 +147,6 @@
 }
 .svg:hover{
     cursor: pointer;
-    
 }
 .targetSvgLove{
     stroke:  #d81861;
@@ -167,6 +166,8 @@
     width: 20px;
     height: 20px;
 }
+
+/* Estilo tarjeta tipo Video */
 .targetVideo{
     width: 100%;
     min-height: 300px;
@@ -175,7 +176,9 @@
 
     /* min-width: 400px;     */
 }
-.carrusel-container2{
+
+/* Slider */
+.carrusel-containerTarget{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,24 +189,77 @@
     box-sizing: border-box;
     /* box-shadow: 0px 0px 10px 4px rgba(125, 177, 182, 0.315); */
 }
-    .slider-item-TargetArticulos{
+
+/* SliderItem */
+.slider-item-Target{
     /* background-color:teal; */
     /* box-shadow: 15px 0px 80px -10px rgba(87, 87, 87, 0.555); */
+    min-width: 250px;
     width: 20.25vw;
     max-width: 300px;
+
+    min-height: 250px;
     height: 20.25vw;
     max-height: 300px;
     scroll-snap-align: end ;
     overflow: hidden;
     box-sizing: border-box;
 }
-.slider-item-container-TargetArticulos{
+
+/* Contenedor de la imagen */
+.sliderItemTargetContIMG{
     /* background-color:tomato; */
+    /* border: 1px solid #000; */
+    min-width: 200px;
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
 }
+
+/* Imagen */
+.sliderItemTargetContIMG img{
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+    width: 240px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 10px 2px rgba(125, 177, 182, 0.315);
+}
+
+/* Botones del Carrusel */
+    /* Boton Izquierdo */
+.carrusel-btnPrev1{
+    border: none;
+    background-color: transparent;
+
+    width: 2rem;
+    cursor: pointer;
+    z-index: 100;
+    position: absolute;
+    top: 40%;
+}
+/* Boton Derecho */
+.carrusel-btnNext2{
+    border: none;
+    background-color: transparent;
+    width: 2rem;
+    /* margin-left: 3px; */
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    right: 0%;
+}
+.targetTexto{
+    /* background-color: tomato; */
+    text-align: justify;
+    min-width: 200px;
+    width: 95%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+
+}
+
 
 /* -----------------Maximo (phone)-------------------------------------------------------------------------------------------- */
 @media (max-width:500px){
@@ -212,26 +268,20 @@
         width: 75%;
         /* background-color: tomato; */
     }
-    .targetDownArticle img{
-        margin-left: 50%;
-        transform: translateX(-50%);
-        height: 90%;
-        width: auto;
-        max-width: 300px;
-        border-radius: 10px;
-        box-shadow: 0px 1px 10px 2px rgba(125, 177, 182, 0.315);
-    }
     .articleContentAcive{
-        height: 305px;
+        height: 355px;
     }
     .targetVideo{
         width: 100%;
         min-height: 200px;
         /* min-width: 400px;     */
     }
-    .slider-item-TargetArticulos{
+
+    /* SliderItem */
+    .slider-item-Target{
         width: 300px;
         height: 200px;
-        /* background-color: teal; */
     }
+
+    
 }

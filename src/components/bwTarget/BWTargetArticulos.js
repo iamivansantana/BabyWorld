@@ -44,53 +44,52 @@ const BWTargetArticulos = ({id}) => {
                             <div>Alas y  raíces Zhong qi Gong (Chine chi kung).</div>
                             <div>Alas. La vida es como te la cuentas (Spotify).</div>
                         </div>
+
                         <div className="targetDownArticle">
-
-
 
                             <div id={id} className="targetArticleContent articleContentAcive">
                             {/* <iframe width="100%w" src="https://www.youtube.com/embed/UOJ8TiL6uoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
                                 {/* <div><img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/></div> */}
 
-                                <div className="carruselFlexColum" >
-                                        {/* <button className="carrusel-btnPrev" id="carrusel-btnPrev3"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button> */}
-                                    <div className="carrusel-container2">
-                                    
-                                        {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
-                                        <Carrusel 
-                                            id={`target${id}`}
-                                            slidesToShow = {1}
-                                            slidesToScroll = {1}
-                                            items = {'.slider-item-TargetArticulos'}
-                                            arrowPrev = {`carrusel-btnPrev${id}`}
-                                            arrowNext = {`carrusel-btnNext${id}`}
-                                            puntos = {`carruselPuntos${id}`}
-                                        >
-                                            <div className="slider-item-TargetArticulos">
-                                                <div className="slider-item-container-TargetArticulos">
-                                                    <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
-                                                </div>
+                                    <div className="carruselFlexColum" >
+                                        <div style={{backgroundColor:'', position:'relative'}}>
+                                            <button className="carrusel-btnPrev1" id={`carrusel-btnPrev${id}`}><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
+                                            <div className="carrusel-containerTarget">
+                                                {/* Note para el correcto funcionamiento si desea visualizar mas de 4 items debe modificar el width del item en la clase .slider-item. a un porcentaje menor */}
+                                                <Carrusel 
+                                                    id={`target${id}`}
+                                                    slidesToShow = {1}
+                                                    slidesToScroll = {1}
+                                                    items = {'.slider-item-Target'}
+                                                    arrowPrev = {`carrusel-btnPrev${id}`}
+                                                    arrowNext = {`carrusel-btnNext${id}`}
+                                                    puntos = {`carruselPuntos${id}`}
+                                                >
+                                                    <div className="slider-item-Target">
+                                                        <div className="sliderItemTargetContIMG">
+                                                            <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="slider-item-Target">
+                                                        <div className="sliderItemTargetContIMG">
+                                                            <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
+                                                        </div>
+                                                    </div>
+                                                    <div className="slider-item-Target">
+                                                        <div className="sliderItemTargetContIMG">
+                                                            <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
+                                                        </div>
+                                                    </div>
+                                                </Carrusel>
                                             </div>
-                                            <div className="slider-item-TargetArticulos">
-                                                <div className="slider-item-container-TargetArticulos">
-                                                <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
-                                                </div>
-                                            </div>
-                                            <div className="slider-item-TargetArticulos">
-                                                <div className="slider-item-container-TargetArticulos">
-                                                    <img src="\assets\BW-Resources\img\mesaMala.jpeg" alt="mesa mala"/>
-                                                </div>
-                                            </div>
-                                        </Carrusel>
+                                            <button  className="carrusel-btnNext2" id={`carrusel-btnNext${id}`}><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button>
+                                        </div>
                                 
-                                    </div>
-                                        {/* <button className="carrusel-btnNext" id="carrusel-btnNext3"><img src="\assets\BW-Resources\arrowRight.svg" alt="ArrowRight"/></button> */}
-                                
-                                    <div className="carruselPuntos" id={`carruselPuntos${id}`}/>
+                                        <div className="carruselPuntos" id={`carruselPuntos${id}`}/>
                                 </div>
 
                                 <div>
-                                    <div style={{textAlign:'justify'}}>
+                                    <div className="targetTexto"> 
                                         <p>
                                         Un niño pequeño se pega con una mesa y mamá (o papá), acude a su encuentro y con voz lastimera le dice: “Pobrecito, esa mesa fea me le pegó, ¡MESA FEA!, ¡MESA MALA!, ¡No me le vuelva a pegar al niño!, ¡PAO, PAO MESA TONTA!, ya mi amor, ya regañé a la mesa”.
                                         <br/><br/>

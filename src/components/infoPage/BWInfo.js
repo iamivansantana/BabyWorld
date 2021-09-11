@@ -45,62 +45,72 @@ const BWInfo = () => {
 
                         <AppsCard 
                             img={'medicina'}
-                            desc={'Lleva un registro y recordatorio del medicamento de tu bebé.'}
+                            desc={`Lleva un registro y recordatorio del medicamento de tu bebé.  Lleva un registro y recordatorio del medicamento de tu bebé. Lleva un registro y recordatorio del medicamento de tu bebé.Lleva un registro y recordatorio del medicamento de tu bebé.`}
                             color={'Uno'}
-                        />
+                            flexAreaSide={'flexAreasLeft'}
+                            />
                         <AppsCard 
                             img={'lactancia'}
                             desc={'Lleva un registro del tiempo amamantando a tu bebé.'}
                             color={'Dos'}
-                        />
+                            flexAreaSide={'flexAreasRigt'}
+                            />
                         <AppsCard 
                             img={'pañales'}
                             desc={'Lleva el registro de los cambios de pañales de tu bebé.'}
                             color={'Tres'}
-                        />
+                            flexAreaSide={'flexAreasLeft'}
+                            />
                         <AppsCard 
                             img={'temperatura'}
                             desc={'Lleva el registro de la temperatura de tu bebé.'}
                             color={'Cuatro'}
-                            />
-                        <AppsCard 
-                            img={'vacunas'}
-                            desc={'Crea un calendario con recordatorio de las vacunas de tu bebé.'}
-                            color={'Cinco'}
-                            />
-                        <AppsCard 
-                            img={'siestas'}
-                            desc={'Lleva un registro de las siestas que toma tu bebé'}
-                            color={'Seis'}
+                            flexAreaSide={'flexAreasRigt'}
                             />
                         <span className="bwApp-hiden-on ">
-                        <AppsCard 
-                            img={'llanto'}
-                            desc={'Lleva un registro del tiempo de llanto a tu bebé'}
-                            color={'Siete'}
-                            />
-                        <AppsCard 
-                            img={'notas'}
-                            desc={'Crea notas, recordatorios, etc. y visualizalos facilmente.'}
-                            color={'Ocho'}
-                            />
-                        <AppsCard 
-                            img={'resumen'}
-                            desc={'Crea un resumen descargable con estadisticas de los datos registrados de tu bebé.'}
-                            color={'Nueve'}
-                            />
-                            
-                        <AppsCard 
-                            img={'visita medica'}
-                            desc={'Enlista las visitas medicas anteriores y futuras de tu bebé.'}
-                            color={'Diez'}
-                            />
-                            </span>
+                            <AppsCard 
+                                img={'vacunas'}
+                                desc={'Crea un calendario con recordatorio de las vacunas de tu bebé.'}
+                                color={'Cinco'}
+                                flexAreaSide={'flexAreasLeft'}
+                                />
+                            <AppsCard 
+                                img={'siestas'}
+                                desc={'Lleva un registro de las siestas que toma tu bebé'}
+                                color={'Seis'}
+                                flexAreaSide={'flexAreasRigt'}
+                                />
+                            <AppsCard 
+                                img={'llanto'}
+                                desc={'Lleva un registro del tiempo de llanto a tu bebé'}
+                                color={'Siete'}
+                                flexAreaSide={'flexAreasLeft'}
+                                />
+                            <AppsCard 
+                                img={'notas'}
+                                desc={'Crea notas, recordatorios, etc. y visualizalos facilmente.'}
+                                color={'Ocho'}
+                                flexAreaSide={'flexAreasRigt'}
+                                />
+                            <AppsCard 
+                                img={'resumen'}
+                                desc={'Crea un resumen descargable con estadisticas de los datos registrados de tu bebé.'}
+                                color={'Nueve'}
+                                flexAreaSide={'flexAreasLeft'}
+                                />
+                                
+                            <AppsCard 
+                                img={'visita medica'}
+                                desc={'Enlista las visitas medicas anteriores y futuras de tu bebé.'}
+                                color={'Diez'}
+                                flexAreaSide={'flexAreasRigt'}
+                                />
+                        </span>
                     </div>
-                    <h2 className="apps-toggle">Ver todo...</h2>
+                    <h2 className="apps-toggle" style={{marginTop:'-20px'}}>Ver todo...</h2>
 
 
-                    <h4>Aprendizaje.</h4>  
+                    <h4 style={{marginTop:'60px'}}>Aprendizaje.</h4>  
                     <div className="carruselFlexColum" >
                         <div className="display-Flex">
                             <button className="carrusel-btnPrev" id="carrusel-btnPrev"><img src="\assets\BW-Resources\arrowLeft.svg" alt="ArrowRight"/></button>
