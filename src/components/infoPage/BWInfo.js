@@ -25,7 +25,7 @@ const BWInfo = () => {
         appsToggle.addEventListener("click",toggleApps);
         
         
-    })
+    });
 
 
 
@@ -41,20 +41,36 @@ const BWInfo = () => {
                     </p>
                     <h4>Registro de Actividades.</h4>  
                       
-                    <div className="bwApps-grid " >
+                    <div id="bwApps-grid" className="bwApps-grid " >
 
                         <AppsCard 
                             img={'medicina'}
-                            desc={`Lleva un registro y recordatorio del medicamento de tu bebé.  Lleva un registro y recordatorio del medicamento de tu bebé. Lleva un registro y recordatorio del medicamento de tu bebé.Lleva un registro y recordatorio del medicamento de tu bebé.`}
+                            desc={"\n Usted puede registrar:\n\n  ● Qué cantidad de medicamento, con qué frecuencia y durante cuánto tiempo lo debe tomar su hijo\n\n ● Cómo se debe administrar el medicamento. Por ejemplo: si se toma por boca; se inhala o aspira hacia los pulmones; se introduce en los oídos, los ojos o el recto; o se aplica sobre la piel"}
                             color={'Uno'}
                             flexAreaSide={'flexAreasLeft'}
-                            />
+                        >
+                            <div>Lleva un registro y recordatorio del medicamento de tu bebé.</div>
+                            <div>Usted puede registrar:</div>
+                            <ul style={{textAlign:'justify'}}>
+                                <li style={{marginBottom:'15px'}}>El nombre del medicamento y para qué se utiliza.</li>
+                                <li style={{marginBottom:'15px'}}>Qué cantidad de medicamento, con qué frecuencia y durante cuánto tiempo lo debe tomar su hijo.</li>
+                                <li>Cómo se debe administrar el medicamento.<span style={{color:'#7d8699'}}>(se toma por boca; se inhala o aspira hacia los pulmones; se introduce en los oídos, los ojos o el recto; o se aplica sobre la piel).</span></li>
+                            </ul>
+                        </AppsCard>
                         <AppsCard 
                             img={'lactancia'}
-                            desc={'Lleva un registro del tiempo amamantando a tu bebé.'}
+                            desc={''}
                             color={'Dos'}
                             flexAreaSide={'flexAreasRigt'}
-                            />
+                        >
+                            <div>Lleva un registro sobre la lactancia de tu bebé.</div>
+                            <div>Usted puede registrar:</div>
+                            <ul style={{textAlign:'justify'}}>
+                                <li style={{marginBottom:'15px'}}>El tiempo de alimentacion cronometrado.</li>
+                                <li style={{marginBottom:'15px'}}>Tipo de Lactancia.<span style={{color:'#7d8699'}}>(Lactancia materna, lactancia de biberón).</span></li>
+                                <li>Cantidad (ml.) en biberon, Recordatorios programados.</li>
+                            </ul>
+                        </AppsCard>
                         <AppsCard 
                             img={'pañales'}
                             desc={'Lleva el registro de los cambios de pañales de tu bebé.'}

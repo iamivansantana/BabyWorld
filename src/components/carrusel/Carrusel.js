@@ -8,7 +8,10 @@ const Carrusel = ({ id,slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,pun
 
 
     const [scrollL, setScrollL] = useState('spanDot0');
+
+    // Estado de cantidad de dots
     const [tamañoDots, settamañoDots] = useState(0);
+
 
     //useEffect para ejecutar el codigo cada que carga el componente, se ejecuta almenos una vez y despues de crear los elementos html.    
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -80,6 +83,18 @@ const Carrusel = ({ id,slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,pun
         }
         const htmldots = result.reduce((accumulator, currentValue) => accumulator + currentValue);
         puntosClass.innerHTML = htmldots; 
+
+
+        //Asigna clase activa al renderizar el componente.
+        const spans = document.getElementsByClassName(`1234${id}`);
+        var arr = Array.prototype.slice.call( spans );
+
+        arr.forEach(element => {
+
+            const resp = element.classList.contains('dotActive');
+            if (!resp) element.classList.remove('dotActive');
+            if(element.id === scrollL) element.classList.add('dotActive');
+        });
 
 
         //BOTONES NEXT & PREV.
@@ -212,6 +227,7 @@ const Carrusel = ({ id,slidesToShow,slidesToScroll,items,arrowPrev,arrowNext,pun
 
     });
 
+    // Efecto que agrega clase activo al Dot
     useEffect(() => {
 
                 const spans = document.getElementsByClassName(`1234${id}`);
