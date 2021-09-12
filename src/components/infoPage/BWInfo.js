@@ -76,26 +76,59 @@ const BWInfo = () => {
                             desc={'Lleva el registro de los cambios de pañales de tu bebé.'}
                             color={'Tres'}
                             flexAreaSide={'flexAreasLeft'}
-                            />
+                        >
+                            <div>Lleva el registro de los cambios de pañal de tu bebé.</div>
+                            <div>Usted puede:</div>
+                            <ul style={{textAlign:'justify'}}>
+                                <li style={{marginBottom:'15px'}}>Registrar los cambios de pañales. </li>
+                                <li style={{marginBottom:'15px'}}>Indica los diferentes tipos de cambio de pañal .<span style={{color:'#7d8699'}}>(Mojado, popó, ambos).</span></li>
+                                <li style={{marginBottom:'15px'}}>Indica color, consistencia, cantidad.</li>
+                                <li>Visualiza la cantidad de cambios por día.</li>
+                            </ul>
+                        </AppsCard>
                         <AppsCard 
                             img={'temperatura'}
                             desc={'Lleva el registro de la temperatura de tu bebé.'}
                             color={'Cuatro'}
                             flexAreaSide={'flexAreasRigt'}
-                            />
+                        >
+                            <div>Registra de los cambios de temperatura de tu bebé.</div>
+                            <div>Usted puede:</div>
+                            <ul style={{textAlign:'justify'}}>
+                                <li style={{marginBottom:'15px'}}>Llevar un control de registro de los cambios de temperatura de su bebé.</li>
+                                <li style={{marginBottom:'15px'}}>Guarda la temperatura en °C con hora de registro. </li>
+                                <li>Visualiza el historial de registros.</li>
+                            </ul>
+                        </AppsCard>
                         <span className="bwApp-hiden-on ">
                             <AppsCard 
                                 img={'vacunas'}
                                 desc={'Crea un calendario con recordatorio de las vacunas de tu bebé.'}
                                 color={'Cinco'}
                                 flexAreaSide={'flexAreasLeft'}
-                                />
+                                >
+                                <div>Crea un calendario con recordatorio de las vacunas de tu bebé.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Crear un calendario de vacunación para tu bebé.</li>
+                                    <li>Programar recordatorios con alarmas.</li>
+                                    <li>Visualiza el calendario registrado.</li>
+                                </ul>
+                            </AppsCard>
                             <AppsCard 
                                 img={'siestas'}
                                 desc={'Lleva un registro de las siestas que toma tu bebé'}
                                 color={'Seis'}
                                 flexAreaSide={'flexAreasRigt'}
-                                />
+                            >
+                                <div>Lleva el registro de las siestas que toma tu bebé.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Llevar el registro de las siestas de tu bebé.</li>
+                                    <li>Tomar el tiempo cronometrado de cada siesta.</li>
+                                    <li>Visualiza el historial de registros.</li>
+                                </ul>
+                            </AppsCard>
                             <AppsCard 
                                 img={'llanto'}
                                 desc={'Lleva un registro del tiempo de llanto a tu bebé'}
