@@ -1,7 +1,7 @@
 import React from 'react';
 import './appsCard.css';
 
-const AppsCard = ({ children,img, desc, color, flexAreaSide }) => {
+const AppsCard = ({ children,img, color, flexAreaSide }) => {
 
     
 
@@ -16,7 +16,6 @@ const AppsCard = ({ children,img, desc, color, flexAreaSide }) => {
                 <div className="flexText">
                     <div className= "bwApp-card-body">
                         <div className="name-card"><span>Descubre la sección</span><span style={{textTransform:'capitalize',fontWeight:'bold'}}> {img}</span>.</div>
-                        {/* <p className="desc-card">{`${desc}`}</p> */}
                         <div className="desc-card">{children}</div>
                         <button className="btn-card" type="button">¡Explorar más!</button>
                     </div>

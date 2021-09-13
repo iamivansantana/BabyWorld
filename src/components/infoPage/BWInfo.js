@@ -44,8 +44,7 @@ const BWInfo = () => {
                     <div id="bwApps-grid" className="bwApps-grid " >
 
                         <AppsCard 
-                            img={'medicina'}
-                            desc={"\n Usted puede registrar:\n\n  ● Qué cantidad de medicamento, con qué frecuencia y durante cuánto tiempo lo debe tomar su hijo\n\n ● Cómo se debe administrar el medicamento. Por ejemplo: si se toma por boca; se inhala o aspira hacia los pulmones; se introduce en los oídos, los ojos o el recto; o se aplica sobre la piel"}
+                            img={'medicina'}desc={"\n Usted puede registrar:\n\n  ● Qué cantidad de medicamento, con qué frecuencia y durante cuánto tiempo lo debe tomar su hijo\n\n ● Cómo se debe administrar el medicamento. Por ejemplo: si se toma por boca; se inhala o aspira hacia los pulmones; se introduce en los oídos, los ojos o el recto; o se aplica sobre la piel"}
                             color={'Uno'}
                             flexAreaSide={'flexAreasLeft'}
                         >
@@ -59,7 +58,6 @@ const BWInfo = () => {
                         </AppsCard>
                         <AppsCard 
                             img={'lactancia'}
-                            desc={''}
                             color={'Dos'}
                             flexAreaSide={'flexAreasRigt'}
                         >
@@ -73,7 +71,6 @@ const BWInfo = () => {
                         </AppsCard>
                         <AppsCard 
                             img={'pañales'}
-                            desc={'Lleva el registro de los cambios de pañales de tu bebé.'}
                             color={'Tres'}
                             flexAreaSide={'flexAreasLeft'}
                         >
@@ -88,7 +85,6 @@ const BWInfo = () => {
                         </AppsCard>
                         <AppsCard 
                             img={'temperatura'}
-                            desc={'Lleva el registro de la temperatura de tu bebé.'}
                             color={'Cuatro'}
                             flexAreaSide={'flexAreasRigt'}
                         >
@@ -96,14 +92,13 @@ const BWInfo = () => {
                             <div>Usted puede:</div>
                             <ul style={{textAlign:'justify'}}>
                                 <li style={{marginBottom:'15px'}}>Llevar un control de registro de los cambios de temperatura de su bebé.</li>
-                                <li style={{marginBottom:'15px'}}>Guarda la temperatura en °C con hora de registro. </li>
+                                <li style={{marginBottom:'15px'}}>Guarda la temperatura de tu bebé en °C con hora de registro. </li>
                                 <li>Visualiza el historial de registros.</li>
                             </ul>
                         </AppsCard>
                         <span className="bwApp-hiden-on ">
                             <AppsCard 
                                 img={'vacunas'}
-                                desc={'Crea un calendario con recordatorio de las vacunas de tu bebé.'}
                                 color={'Cinco'}
                                 flexAreaSide={'flexAreasLeft'}
                                 >
@@ -117,11 +112,10 @@ const BWInfo = () => {
                             </AppsCard>
                             <AppsCard 
                                 img={'siestas'}
-                                desc={'Lleva un registro de las siestas que toma tu bebé'}
                                 color={'Seis'}
                                 flexAreaSide={'flexAreasRigt'}
                             >
-                                <div>Lleva el registro de las siestas que toma tu bebé.</div>
+                                <div>Registra el tiempo de las siestas que toma tu bebé.</div>
                                 <div>Usted puede:</div>
                                 <ul style={{textAlign:'justify'}}>
                                     <li>Llevar el registro de las siestas de tu bebé.</li>
@@ -131,29 +125,59 @@ const BWInfo = () => {
                             </AppsCard>
                             <AppsCard 
                                 img={'llanto'}
-                                desc={'Lleva un registro del tiempo de llanto a tu bebé'}
                                 color={'Siete'}
                                 flexAreaSide={'flexAreasLeft'}
-                                />
+                            >
+                                <div>Lleva un registro del tiempo de llanto a tu bebé.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Llevar el registro del llanto de tu bebé.</li>
+                                    <li>Tomar el tiempo cronometrado de cada llanto.</li>
+                                    <li>Visualiza el historial de registros.</li>
+                                </ul>
+                            </AppsCard>
                             <AppsCard 
                                 img={'notas'}
                                 desc={'Crea notas, recordatorios, etc. y visualizalos facilmente.'}
                                 color={'Ocho'}
                                 flexAreaSide={'flexAreasRigt'}
-                                />
+                            >
+                                <div>Crea notas, recordatorios, etc. y visualizalos facilmente.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Crear notas, listas, recordatorios, etc...</li>
+                                    <li>Visualiza todo el contenido registrado.</li>
+                                </ul>
+                            </AppsCard>
                             <AppsCard 
                                 img={'resumen'}
                                 desc={'Crea un resumen descargable con estadisticas de los datos registrados de tu bebé.'}
                                 color={'Nueve'}
                                 flexAreaSide={'flexAreasLeft'}
-                                />
+                            >
+                               <div>Crea un resumen descargable con estadisticas de los datos registrados de tu bebé.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Visualiza estadisticas de todo el contenido registrado.</li>
+                                    <li>Visualiza estadisticas individuales del contenido registrado.</li>
+                                    <li>Descargar el resumen de estadisticas en archivo PDF.</li>
+                                </ul> 
+                            </AppsCard>
                                 
                             <AppsCard 
                                 img={'visita medica'}
                                 desc={'Enlista las visitas medicas anteriores y futuras de tu bebé.'}
                                 color={'Diez'}
                                 flexAreaSide={'flexAreasRigt'}
-                                />
+                            >
+                                 <div>Enlista las visitas médicas anteriores y futuras de tu bebé.</div>
+                                <div>Usted puede:</div>
+                                <ul style={{textAlign:'justify'}}>
+                                    <li>Crear un calendario de visitas médicas.</li>
+                                    <li>Programar recordatorios con alarmas.</li>
+                                    <li>Visualiza el calendario registrado.</li>
+                                </ul>
+                            </AppsCard>
                         </span>
                     </div>
                     <h2 className="apps-toggle" style={{marginTop:'-20px'}}>Ver todo...</h2>

@@ -1,11 +1,12 @@
 .flexContent{
-    width: 75%;
+    width: 85%;
+    max-width: 1200px;
     min-height: 300px;
     height: auto;
     /* padding-left: 40px; */
     /* display: flex; */
     /* background-color: #d9ecf3a1; */
-    border: 3px solid #d9ecf3a1;
+    /* border: 3px solid #d9ecf3a1; */
     border-radius: 15px;
     padding: 15px;
     

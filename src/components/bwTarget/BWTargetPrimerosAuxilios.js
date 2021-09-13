@@ -18,10 +18,11 @@ const BWTargetPrimerosAuxilios = ({id}) => {
                         <div className="targetDownArticle">
 
 
-
+                        {/* Video de youtube */}
                         <iframe className="targetVideo" src="https://www.youtube.com/embed/UOJ8TiL6uoU" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                             
 
+                            {/* Seccion de botones de reaccion y save */}
                             <div className="targetDownButton" style={{color:'#d81861', marginTop:'10px'}}>
                                 <div className="targetheadButtonLove">
                                     <svg className="svg targetSvgLove" xmlns="http://www.w3.org/2000/svg" viewBox="-.8 -1 23 19">
