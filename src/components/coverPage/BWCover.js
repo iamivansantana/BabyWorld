@@ -28,11 +28,16 @@ const BWCover = () => {
                             <div className="bwWorld">
                                 <img  src="\assets\BW-Resources\bwWorld2.svg" alt="worl"/>
                             </div>
+                            <div className="bwDescription">
+                                <h4>Una plataforma que te ayudará a lo largo del crecimiento / desarrollo de tú bebé.</h4>
+                                <h3>PROXIMAMENTE</h3>
+                            </div>
                             <div className="bwStores">
                                 <img src="assets\BW-Resources\icons\appStoreInsignia.svg" alt="appstore"/>
                                 <img src="assets\BW-Resources\icons\googleplayInsignia.png" alt="playstore"/>
                             </div>
                         </div>
+
                         <div className="bw-cover-dow">
                             <div className="bw-cover-content-grid">
                                 <div className="white">
